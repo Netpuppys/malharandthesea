@@ -14,6 +14,7 @@ import ustadShujaat from "../../public/guests/ustadShujaat.jpeg"
 import rakeshChaurasia from "../../public/guests/RakeshChaurasia.jpg"
 import garryLawyer from "../../public/guests/GarryLawyer.jpeg"
 import amaanAndAyaan from "../../public/guests/amaanAndAyaan.jpeg"
+import { useMobile } from '../utils/MobileContext'
 
 const eventGuests = [
     {
@@ -86,6 +87,7 @@ const eventGuests = [
 
 
 const LineUp = () => {
+    const { isMobile } = useMobile()
     const [ selectedDay, setSelectedDay ] = useState(0)
     const [ viewAll, setViewAll ] = useState(false)
 
@@ -109,7 +111,7 @@ const LineUp = () => {
         </div>
 
         <div className='w-full p-5 pt-10 xl:p-20 flex items-center justify-center gap-4 lg:gap-[4rem] flex-wrap'>
-            {eventGuests[selectedDay].guests.slice(0, viewAll? 20 : 2).map((item, id) => (
+            {eventGuests[selectedDay].guests.slice(0, 20).map((item, id) => (
                 <div key={id} className='w-[100%] lg:w-[calc(33%-2.7rem)] xl:w-[calc(25%-3rem)] h-[28rem] xl:h-[26rem]'>
                     <div className='w-full mb-8 aspect-square relative border-black border-r-4 border-b-4'>
                         <div className='w-full absolute top-[-1rem] left-[-1rem] aspect-square overflow-hidden '>
@@ -121,7 +123,7 @@ const LineUp = () => {
                         </div>
                     </div>
 
-                    <p className='font-sans w-full pr-4 text-wrap tracking-tight text-5xl text-black font-extrabold'>
+                    <p className='font-sans  w-full pr-4 text-wrap tracking-tight text-5xl text-black font-extrabold'>
                         {item.name}
                     </p>
                 </div>
@@ -130,7 +132,7 @@ const LineUp = () => {
 
         <button 
             onClick={() => setViewAll(prev => !prev)}
-            className={` ${(viewAll)? "bg-aqua" : "bg-off-white"} py-3 uppercase px-6 text-3xl font-bold font-sans text-black`}
+            className={` ${(viewAll)? "bg-aqua" : "bg-off-white"} py-3 lg:hidden uppercase px-6 text-3xl font-bold font-sans text-black`}
         >
             {viewAll? "Collapse" : "View All"}
         </button>

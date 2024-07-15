@@ -9,26 +9,29 @@ import Component5 from "./components/Component5";
 import Component6 from "./components/Component6";
 import Component7 from "./components/Component7";
 import LineUp from "./components/LineUp";
+import { MobileProvider } from "./utils/MobileContext";
 
 export default function Home() {
   return (
-    <main className="min-h-screen min-w-screen bg-white md:pr-[5.75rem]">
-      <Sidebar />
+    <MobileProvider>
+      <main className="min-h-screen min-w-screen bg-white md:pr-[5.75rem]">
+        <Sidebar />
 
-      <div className="w-full h-full">
-        <Navbar />
+        <div className="w-full h-full">
+          <Navbar />
 
-        <Banner />
-        {/* <Banner /> */}
-        <Component2 />
-        <Component3 />
-        <Component4 />
-        <Component5 />
-        <Component6 />
-        {/* <Component7 /> */}
-        <LineUp />
-        <Footer />
-      </div>
-    </main>
+          <Banner />
+          {/* <Banner /> */}
+          <Component2 />
+          <Component3 />
+          <Component4 />
+          <Component5 />
+          <Component6 />
+          {/* <Component7 /> */}
+          <LineUp />
+          <Footer />
+        </div>
+      </main>
+    </MobileProvider>
   );
 }
