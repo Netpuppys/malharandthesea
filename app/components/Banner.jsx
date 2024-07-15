@@ -1,20 +1,22 @@
 import React from 'react'
 import bannerImg from "../../public/banner/heroBanner.png"
 import Image from 'next/image'
+import BannerCarousel from '@/components/ui/BannerCarousel'
 
 const Banner = () => {
   return (
-    <div className='w-full relative flex items-center justify-center overflow-hidden h-[calc(100vh-9.25rem)]'>
-      <div className='relative w-full h-full '>
+    <div className='w-full pt-[5rem] md:pt-0 relative flex items-center justify-center overflow-hidden h-[calc(100vh-9.25rem)]'>
+      <div className='relative w-full h-full'>
         <div className='shadow-inset-custom w-full h-full absolute left-0 top-0'></div>
-        <Image
+        {/* <Image
             src={bannerImg}
             className='w-full h-full -z-10'
             alt='banner'
-        />
+        /> */}
+        <BannerCarousel />
       </div>
 
-        <button className='absolute bottom-[4.4rem] left-44 z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'>
+        <button className='absolute bottom-[4.4rem] left-20 md:left-44 z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'>
             BUY TICKETS
         </button>
     </div>

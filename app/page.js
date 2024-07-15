@@ -12,7 +12,7 @@ import LineUp from "./components/LineUp";
 
 export default function Home() {
   return (
-    <main className="min-h-screen min-w-screen bg-white pr-[5.75rem]">
+    <main className="min-h-screen min-w-screen bg-white md:pr-[5.75rem]">
       <Sidebar />
 
       <div className="w-full h-full">
@@ -25,7 +25,7 @@ export default function Home() {
         <Component4 />
         <Component5 />
         <Component6 />
-        <Component7 />
+        {/* <Component7 /> */}
         <LineUp />
         <Footer />
       </div>

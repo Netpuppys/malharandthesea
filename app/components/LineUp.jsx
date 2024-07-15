@@ -3,7 +3,17 @@
 import React, { useState } from 'react'
 import iraDubey from "../../public/guests/iraDubey.png"
 import Image from 'next/image'
-// import iraDubey from "../../public/guests/"
+import Kaushiki from "../../public/guests/Kaushiki.jpeg"
+import purbayaChatterjee from "../../public/guests/PurbayanChatterjee.jpeg"
+import ustadAmjad from "../../public/guests/UstadAmjad.jpeg"
+import pareshMaity from "../../public/guests/PareshMaity.jpeg"
+import ShivamBharadwaj from "../../public/guests/ShivamBharadwaj.jpeg"
+import BeckalyFranks from "../../public/guests/BeckalyFranks.jpeg"
+import nadiaRebelo from "../../public/guests/NadiaRebelo.jpeg"
+import ustadShujaat from "../../public/guests/ustadShujaat.jpeg"
+import rakeshChaurasia from "../../public/guests/RakeshChaurasia.jpg"
+import garryLawyer from "../../public/guests/GarryLawyer.jpeg"
+import amaanAndAyaan from "../../public/guests/amaanAndAyaan.jpeg"
 
 const eventGuests = [
     {
@@ -15,23 +25,23 @@ const eventGuests = [
             },
             {
                 name: "Kaushiki Chakraborty",
-                image: iraDubey
+                image: Kaushiki
             },
             {
                 name: "Purbayan Chatterjee",
-                image: iraDubey
+                image: purbayaChatterjee
             },
             {
                 name: "Ustad Amjad Ali Khan",
-                image: iraDubey
+                image: ustadAmjad
             },
             {
                 name: "Paresh Maity",
-                image: iraDubey
+                image: pareshMaity
             },
             {
                 name: "Shivam Bhardwaj",
-                image: iraDubey
+                image: ShivamBharadwaj
             }
         ]
     },
@@ -40,31 +50,31 @@ const eventGuests = [
         guests: [
             {
                 name: "Beckaly Franks",
-                image: iraDubey
+                image: BeckalyFranks
             },
             {
                 name: "Nadia Rebelo",
-                image: iraDubey
+                image: nadiaRebelo
             },
             {
-                name: "Amaan Ali Bangash",
-                image: iraDubey
-            },
-            {
-                name: "Ayaan Ali Bangash",
-                image: iraDubey
-            },
+                name: "Amaan & Ayaan Ali Bangash",
+                image: amaanAndAyaan
+            }, 
+            // {
+            //     name: "Ayaan Ali Bangash",
+            //     image: iraDubey
+            // },
             {
                 name: "Ustad Shujaat Husain Khan",
-                image: iraDubey
+                image: ustadShujaat
             },
             {
                 name: "Rakesh Chaurasia",
-                image: iraDubey
+                image: rakeshChaurasia
             },
             {
                 name: "Gary Lawyer",
-                image: iraDubey
+                image: garryLawyer
             },
             {
                 name: "Kaiya Maxfield",
@@ -77,10 +87,11 @@ const eventGuests = [
 
 const LineUp = () => {
     const [ selectedDay, setSelectedDay ] = useState(0)
+    const [ viewAll, setViewAll ] = useState(false)
 
   return (
     <div className='w-full px-20 py-10'>
-        <div className='w-full flex items-center justify-between'>
+        <div className='w-full flex flex-col xl:flex-row items-center justify-between'>
             <h1 className='text-pink font-sans text-6xl font-extrabold'>
             LINE UP
             </h1>
@@ -97,14 +108,14 @@ const LineUp = () => {
             </div>
         </div>
 
-        <div className='w-full p-20 flex items-center justify-start gap-[4rem] flex-wrap'>
-            {eventGuests[selectedDay].guests.map((item, id) => (
-                <div key={id} className='w-[calc(25%-3rem)] h-[26rem]'>
+        <div className='w-full p-5 pt-10 xl:p-20 flex items-center justify-center gap-4 lg:gap-[4rem] flex-wrap'>
+            {eventGuests[selectedDay].guests.slice(0, viewAll? 20 : 2).map((item, id) => (
+                <div key={id} className='w-[100%] lg:w-[calc(33%-2.7rem)] xl:w-[calc(25%-3rem)] h-[28rem] xl:h-[26rem]'>
                     <div className='w-full mb-8 aspect-square relative border-black border-r-4 border-b-4'>
                         <div className='w-full absolute top-[-1rem] left-[-1rem] aspect-square overflow-hidden '>
                             <Image
                                 src={item.image}
-                                className='object-cover'
+                                className='object-cover w-full h-full'
                                 alt={item.name}
                             />
                         </div>
@@ -116,6 +127,13 @@ const LineUp = () => {
                 </div>
             ))}
         </div>
+
+        <button 
+            onClick={() => setViewAll(prev => !prev)}
+            className={` ${(viewAll)? "bg-aqua" : "bg-off-white"} py-3 uppercase px-6 text-3xl font-bold font-sans text-black`}
+        >
+            {viewAll? "Collapse" : "View All"}
+        </button>
     </div>
   )
 }

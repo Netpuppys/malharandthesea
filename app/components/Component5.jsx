@@ -103,15 +103,15 @@ const Component5 = () => {
     const [ selectedDay, setSelectedDay ] = useState(0)
 
   return (
-    <div className='w-full bg-[#F4F4F3] py-16'>
-        <div className='w-full flex justify-end px-20 h-fit'>
+    <div className='w-full relative pt-60 xl:pt-0 bg-[#F4F4F3] py-16'>
+        <div className='w-full absolute xl:relative top-0 flex justify-end px-20 h-fit'>
             <Image
                 src={ticketBg}
-                className='max-w-[50%]'
+                className='xl:max-w-[50%] w-[100%]'
                 alt='malhaar'
             />
         </div>
-        <div className='w-full px-32'>
+        <div className='w-full px-10 xl:px-32'>
             <p className='text-pink mb-4 text-6xl font-bold font-sans'>
                 EVENTS
             </p>
@@ -128,30 +128,30 @@ const Component5 = () => {
             </div>
         </div>
 
-        <div className='w-full px-32 py-10'>
+        <div className='w-full px-10 xl:px-32 py-10'>
             {eventTimeline[selectedDay].events.map((item, id) => (
                 <div 
                     key={id} 
-                    className={`w-full flex h-40 py-5 border-black border-b-2 ${id === eventTimeline[selectedDay].events.length-1 && "border-b-0"}`}
+                    className={`w-full flex flex-col gap-4 xl:gap-0 relative xl:flex-row  xl:h-40 py-5 border-black border-b-2 ${id === eventTimeline[selectedDay].events.length-1 && "border-b-0"}`}
                 >
-                    <div className='flex flex-col w-[15%] border-r-2 border-black'>
-                        <p className='text-pink mb-3 text-2xl text-wrap pr-4 font-sans font-bold'>
+                    <div className='flex flex-col xl:w-[15%] xl:border-r-2 border-black'>
+                        <p className='text-pink xl:mb-3 text-2xl text-wrap pr-4 font-sans font-bold'>
                             {eventTimeline[selectedDay].date}
                         </p>
                         <p className='text-black text-opacity-70'>
                             {item.time}
                         </p>
                     </div>
-                    <div className='flex w-[70%] border-black border-r-2 items-center justify-between px-10'>
-                        <p className='text-black w-[50%] font-sans font-bold text-4xl'>
+                    <div className='flex xl:w-[70%] flex-col xl:flex-row border-black xl:border-r-2 items-center justify-between xl:px-10'>
+                        <p className='text-black mb-3 xl:mb-0 w-full xl:w-[50%] font-sans font-bold text-4xl'>
                             {item.title}
                         </p>
-                        <p className='text-black text-opacity-70 w-[50%] font-light text-lg line-clamp-3'>
+                        <p className='text-black text-opacity-70 w-full xl:w-[50%] font-light text-lg line-clamp-3'>
                             {item.details}
                         </p>
                     </div>
-                    <div className='w-[15%] flex items-center justify-center'>
-                        <button className='text-3xl flex items-center justify-center uppercase font-bold text-aqua font-sans'>
+                    <div className='xl:w-[15%] flex items-center justify-center'>
+                        <button className='text-3xl absolute top-10 right-0 xl:relative flex items-center justify-center uppercase font-bold text-aqua font-sans'>
                             details <VscTriangleRight />
                         </button>
                     </div>

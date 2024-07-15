@@ -7,18 +7,21 @@ import { LuMenu } from "react-icons/lu";
 import { useState } from "react";
 import NavMenu from "./NavMenu";
 import { IoMdClose } from "react-icons/io";
+import bmsBtn from "../public/sidebar/bmsBtn.png"
 
 const Sidebar = () => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
   return (
-    <div className="w-[5.75rem] h-screen fixed top-0 overflow-visible right-0 z-50 bg-off-white">
+    <div className="w-[5.75rem] hidden md:block h-screen fixed top-0 overflow-visible right-0 z-50 bg-off-white">
 
         {isNavMenuVisible && <NavMenu />}
 
-        <button className="group relative overflow-visible w-full h-[9.25rem] max-h-[9.25rem]">
+        <button 
+            onClick={() => setIsNavMenuVisible(prev => !prev)}
+            className="group relative overflow-visible w-full h-[9.25rem] max-h-[9.25rem]"
+        >
             <div
-                onClick={() => setIsNavMenuVisible(prev => !prev)}
                 className="relative z-40 w-full h-full flex items-center justify-center"
             >
                 <Image
@@ -44,10 +47,10 @@ const Sidebar = () => {
             </div>
         </button>
 
-        <div className="w-full h-[calc(100%-9.25rem)] bg-off-white flex z-50 items-center justify-center">
-            <button className="w-8 h-fit">
+        <div className="w-full h-[calc(100%-9.25rem)] bg-white flex z-50 items-center justify-center">
+            <button className="w-12 h-fit">
                 <Image
-                    src={subscribeBtn}
+                    src={bmsBtn}
                     className="w-full h-full"
                     alt="Main menu"
                 />

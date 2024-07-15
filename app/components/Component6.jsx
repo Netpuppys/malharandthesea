@@ -50,36 +50,35 @@ const Component6 = () => {
                 setCurrentData(prev => prev-1)
                 return
             }
-            return
         }
     }
 
   return (
-    <div className='w-full h-[40rem] overflow-hidden relative flex items-center justify-center px-10'>
+    <div className='w-full py-10 xl:h-[40rem] overflow-hidden relative flex items-center justify-center px-10'>
         <Image
             src={cocktailImage}
             className='object-cover h-full w-full z-0 absolute top-0 left-0'
             alt='cocktail party'
         />
-        <div className='h-[70%] flex flex-col z-10 items-center justify-between px-24'>
-            <h1 className='text-pink text-center max-w-[60rem] text-8xl font-sans font-extrabold'>
+        <div className='h-[70%] flex flex-col z-10 items-center justify-between gap-4 xl:gap-10 xl:px-24'>
+            <h1 className='text-pink text-center max-w-[60rem] text-4xl xl:text-8xl font-sans font-extrabold'>
                 {content[currentData].title}
             </h1>
-            <h4 className='text-white text-center max-w-[50rem] text-5xl font-sans font-bold text-wrap line-clamp-2'>
+            <h4 className='text-white text-center max-w-[50rem] text-2xl xl:text-5xl font-sans font-bold text-wrap'>
                 {content[currentData].subTitle}
             </h4>
 
             <div className='flex items-center justify-center gap-4'>
                 <button 
                     onClick={() => handleContentChange(false)} 
-                    className='text-6xl text-white focus:outline-none'
+                    className='text-2xl xl:text-6xl text-white focus:outline-none'
                 >
                     <VscTriangleLeft />
                 </button>
-                <div className='text-5xl text-white'>|</div>
+                <div className=' text-xl xl:text-5xl text-white'>|</div>
                 <button 
                     onClick={() => handleContentChange(true)} 
-                    className='text-6xl text-white focus:outline-none'
+                    className='text-2xl xl:text-6xl text-white focus:outline-none'
                 >
                     <VscTriangleRight />
                 </button>

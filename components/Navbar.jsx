@@ -4,6 +4,8 @@ import Image from "next/image"
 import malhaarLogo from "../public/logos/malhaarLogo.png"
 import Link from "next/link"
 import { useState } from "react"
+import { IoMdClose } from "react-icons/io"
+import { LuMenu } from "react-icons/lu"
 import NavMenu from "./NavMenu"
 
 const links = [
@@ -21,32 +23,42 @@ const Navbar = () => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
   return (
-    <div className="h-[9.25rem] w-full bg-white px-14 flex items-center justify-between">
+    <div className={`h-[5rem] md:h-[9.25rem] z-50 fixed md:relative w-full bg-custom-gradient pr-4 md:pr-14 flex items-center justify-between`}>
+
+        {isNavMenuVisible && <NavMenu />}
+
         <button
-            className=""
+            className="h-full w-fit md:w-[7.375rem]"
         >
             <Image
                 src={malhaarLogo}
-                className=""
+                className="h-full object-contain w-fit"
                 alt="malhaar logo"
             /> 
         </button>
 
-        <div className="flex items-center justify-center gap-6">
+        <div className="hidden md:flex items-center justify-center gap-6">
             {links.map((link, id) => (
-                <Link key={id} href={link.link} className="uppercase text-black text-3xl font-sans font-bold">
+                <Link key={id} href={link.link} className="uppercase text-white text-3xl font-sans font-bold">
                     {link.name}
                 </Link>
             ))}
 
             <button 
-                className="uppercase ml-4 font-sans text-3xl text-black font-bold py-3 px-6 bg-aqua"
+                className="uppercase ml-4 font-sans text-3xl text-white font-bold py-3 px-6 bg-aqua"
             >
                 TICKETS
             </button>
         </div>
 
-        
+        <button 
+            className=" md:hidden"
+            onClick={() => setIsNavMenuVisible(prev => !prev)}
+        >
+            <p className="text-[#e8e8e8] z-20 text-5xl">
+                {isNavMenuVisible? <IoMdClose /> : <LuMenu />}
+            </p>
+        </button>
     </div>
   )
 }

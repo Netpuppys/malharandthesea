@@ -29,11 +29,11 @@ const navItems = [
 
 const NavMenu = () => {
   return (
-    <div className='bg-[#171717] animate-slide-in -z-10 flex flex-col items-center justify-between w-[18rem] h-[calc(100vh-9.25rem)] absolute bottom-0 right-[100%] py-8'>
+    <div className='bg-[#171717] w-[18rem] h-[calc(100vh-5rem)] md:animate-slide-in z-50 md:-z-10 flex flex-col items-center justify-between md:h-[calc(100vh-9.25rem)] absolute top-[100%] right-0 md:bottom-0 md:right-[100%] py-8'>
         <div className='w-full h-fit flex flex-col items-start justify-start py-24 px-10 gap-4'>
             {navItems.map((item, id) => (
                 <Link key={id} href={item.link}
-                    className='text-5xl text-off-white font-sans hover:text-pink font-extrabold'
+                    className='text-3xl text-off-white font-sans hover:text-pink font-extrabold'
                 >
                     {item.name}
                 </Link>

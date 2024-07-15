@@ -27,23 +27,23 @@ const Component3 = () => {
             A 5 STAR MUSICAL EVENT
         </p>
 
-        <div className='flex items-center justify-center px-52'>
+        <div className='flex flex-col lg:flex-row items-center gap-10 lg:gap-0 justify-center px-10 xl:px-52'>
             {cardData.map((item, index) => (
-                <div key={index} className='flex  flex-col relative items-center justify-start px-10 gap-3'>
+                <div key={index} className='flex lg:h-[30rem] xl:h-fit flex-col relative items-center justify-start px-10 gap-5 lg:gap-3'>
                     <Image
                         src={item.image}
-                        className='w-[18rem]'
+                        className='w-full lg:w-[18rem]'
                         alt={item.title}
                     />
-                    <p className='text-pink text-3xl font-sans font-bold'>
+                    <p className='text-pink text-4xl lg:text-2xl xl:text-3xl font-sans font-bold text-center'>
                         {item.title}
                     </p>
-                    <p className='text-black text-wrap text-2xl font-sans font-bold text-center'>
+                    <p className='text-black px-10 lg:px-0 text-wrap text-xl xl:text-2xl text-center'>
                         {item.desc}
                     </p>
 
                     {(index !== cardData.length -1) &&
-                    <div className='bg-black absolute top-5 right-0 h-[70%] w-[2px] rounded-full'>.</div>}
+                    <div className='bg-black hidden lg:block absolute top-5 right-0 h-[70%] w-[2px] rounded-full'>.</div>}
                 </div>
             ))
             }
