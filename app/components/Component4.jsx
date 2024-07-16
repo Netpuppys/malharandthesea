@@ -33,15 +33,15 @@ const Component4 = () => {
   return (
     <div className='bg-white py-24 xl:h-[35rem] flex xl:flex-row flex-col items-center justify-center gap-20 w-full'>
         <div className='w-full xl:w-[50%] px-20 xl:px-28 flex flex-col items-start justify-center'>
-            <div className='w-full h-[12rem]'>
+            <div className='w-full h-[5rem] xl:h-[12rem]'>
             <ScrollText
                 textArray={textArray}
                 updateInterval={updateInterval}
-                styles={"text-pink max-w-full text-wrap text-[3rem] xl:text-[4.5rem] leading-none font-sans font-extrabold"}
+                styles={"text-pink max-w-full text-wrap text-[2.5rem] lg:text-[3.5rem] leading-none font-sans font-extrabold"}
             />
             </div>
 
-            <div className='w-full h-[12rem]'>
+            <div className='w-full hidden xl:block h-[12rem]'>
                 <ScrollText2
                     textArray={contentArray}
                     updateInterval={updateInterval}
