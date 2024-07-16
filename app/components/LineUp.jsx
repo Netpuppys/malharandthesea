@@ -91,6 +91,14 @@ const LineUp = () => {
     const [ selectedDay, setSelectedDay ] = useState(0)
     const [ viewAll, setViewAll ] = useState(false)
 
+    const lineUpList = () => {
+        if (isMobile) {
+            return viewAll? 20 : 2
+        } else {
+            return 20
+        }
+    }
+
   return (
     <div className='w-full px-20 py-10'>
         <div className='w-full flex flex-col xl:flex-row items-center justify-between'>
@@ -111,7 +119,7 @@ const LineUp = () => {
         </div>
 
         <div className='w-full p-5 pt-10 xl:p-20 flex items-center justify-center gap-4 lg:gap-[4rem] flex-wrap'>
-            {eventGuests[selectedDay].guests.slice(0, 20).map((item, id) => (
+            {eventGuests[selectedDay].guests.slice(0, lineUpList()).map((item, id) => (
                 <div key={id} className='w-[100%] lg:w-[calc(33%-2.7rem)] xl:w-[calc(25%-3rem)] h-[28rem] xl:h-[26rem]'>
                     <div className='w-full mb-8 aspect-square relative border-black border-r-4 border-b-4'>
                         <div className='w-full absolute top-[-1rem] left-[-1rem] aspect-square overflow-hidden '>

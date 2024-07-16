@@ -1,17 +1,21 @@
-"use client"
+"use client"; // This directive ensures the file is treated as a client component in Next.js
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 const MobileContext = createContext();
 
 export const MobileProvider = ({ children }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 768);
-  };
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add resize event listener
     window.addEventListener("resize", handleResize);
 
     return () => {

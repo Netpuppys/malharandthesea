@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import pinkBg from "../public/backgrounds/pinkDotBg.png"
-import subscribeBtn from "../public/sidebar/subscribeBtn.png"
 import { LuMenu } from "react-icons/lu";
 import { useState } from "react";
 import NavMenu from "./NavMenu";
@@ -13,9 +12,10 @@ const Sidebar = () => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
   return (
-    <div className="w-[5.75rem] hidden md:block h-screen fixed top-0 overflow-visible right-0 z-50 bg-off-white">
+    <div className="w-[5.75rem] hidden md:block h-screen fixed top-0 overflow-visible right-0 z-[99] bg-off-white">
 
         {isNavMenuVisible && <NavMenu />}
+        {console.log(isNavMenuVisible)}
 
         <button 
             onClick={() => setIsNavMenuVisible(prev => !prev)}

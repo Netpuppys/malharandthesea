@@ -1,20 +1,28 @@
 import Image from 'next/image'
 import React from 'react'
 import banner from "../../public/banner/heroBanner.png"
+import stay1 from "../../public/featured/stay1.jpeg"
+import stay2 from "../../public/featured/stay2.jpeg"
+import stay3 from "../../public/featured/stay3.jpeg"
+import cuisine1 from "../../public/featured/cuisine1.jpeg"
+import cuisine2 from "../../public/featured/cuisine2.jpeg"
+import music1 from "../../public/featured/music1.jpeg"
+import music2 from "../../public/featured/music2.jpeg"
+import MiniCarousel from '@/components/ui/MiniCarousel'
 
 const cardData = [
     {
-        image: banner,
+        image: [ stay1, stay2 ],
         title: "Luxurious Stay",
         desc: "Enjoy a world-class residential concert experience at the ITC Grand Goa Resort and Spa, known for its exceptional hospitality"
     },
     {
-        image: banner,
+        image: [ cuisine1, cuisine2 ],
         title: "Gourmet Cuisine",
         desc: "Savor gourmet meals and exquisite cocktails prepared by renowned chefs in a luxurious setting"
     },
     {
-        image: banner,
+        image: [ music1, music2 ],
         title: "Exclusive Musical Performances",
         desc: "Delight in soul-stirring performances, featuring Indian classical, Sufi Qawwali, rock, pop, and fado music"
     },
@@ -27,14 +35,20 @@ const Component3 = () => {
             A 5 STAR MUSICAL EVENT
         </p>
 
-        <div className='flex flex-col lg:flex-row items-center gap-10 lg:gap-0 justify-center px-10 xl:px-52'>
+        <div className='flex flex-col lg:flex-row items-center gap-10 lg:gap-0 justify-center px-10 xl:px-48'>
             {cardData.map((item, index) => (
-                <div key={index} className='flex lg:h-[30rem] xl:h-fit flex-col relative items-center justify-start px-10 gap-5 lg:gap-3'>
-                    <Image
+                <div key={index} className='flex lg:h-[30rem] xl:h-[26rem] flex-col relative items-center justify-start px-10 gap-5 lg:gap-3'>
+                    {/* <Image
                         src={item.image}
                         className='w-full lg:w-[18rem]'
                         alt={item.title}
-                    />
+                    /> */}
+                    <div className='w-[18rem] aspect-video'>
+                        <MiniCarousel
+                            images={item.image}
+                        />
+                    </div>
+                    
                     <p className='text-pink text-4xl lg:text-2xl xl:text-3xl font-sans font-bold text-center'>
                         {item.title}
                     </p>

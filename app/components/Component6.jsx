@@ -54,7 +54,7 @@ const Component6 = () => {
     }
 
   return (
-    <div className='w-full py-10 xl:h-[40rem] overflow-hidden relative flex items-center justify-center px-10'>
+    <div className='w-full h-[20rem] xl:h-[40rem] overflow-hidden relative flex items-center justify-center px-10'>
         <Image
             src={cocktailImage}
             className='object-cover h-full w-full z-0 absolute top-0 left-0'

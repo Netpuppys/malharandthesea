@@ -40,10 +40,9 @@ const Component2 = () => {
                     className='w-full aspect-video hidden lg:block'
                     src="https://www.youtube.com/embed/H1CIBqDeWQ0?si=lx9pxBGex6JcNJ6v" 
                     // title="YouTube video player" 
-                    frameborder="0" 
+                    // frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen
+                    // referrerpolicy="strict-origin-when-cross-origin" 
                 ></iframe>
                 <div className='w-full flex flex-col items-center justify-center'>
                     <p className='uppercase text-xl text-black leading-none font-light font-sans text-center'>

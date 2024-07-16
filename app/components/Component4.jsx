@@ -1,15 +1,16 @@
 'use client'
 
 import React, { useState } from 'react'
-import placeholder from "../../public/banner/heroBanner.png"
+// import placeholder from "../../public/banner/heroBanner.png"
 import Image from 'next/image'
 import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
+import mixologyImage from "../../public/banner/mixology.png"
 
 const images = [
-    placeholder,
-    placeholder,
-    placeholder,
-    placeholder,
+    mixologyImage,
+    mixologyImage,
+    mixologyImage,
+    mixologyImage,
 ]
 
 const cardContent = [

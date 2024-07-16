@@ -28,8 +28,9 @@ const navItems = [
 ]
 
 const NavMenu = () => {
+    console.log("hey")
   return (
-    <div className='bg-[#171717] w-[18rem] h-[calc(100vh-5rem)] md:animate-slide-in z-50 md:-z-10 flex flex-col items-center justify-between md:h-[calc(100vh-9.25rem)] absolute top-[100%] right-0 md:bottom-0 md:right-[100%] py-8'>
+    <div className='bg-[#171717] w-[18rem]  h-[calc(100vh-5rem)] md:animate-slide-in z-[99] md:-z-10 flex flex-col items-center justify-between md:h-[calc(100vh-9.25rem)] absolute top-[100%] md:top-[9.25rem] right-0 md:bottom-0 md:right-[100%] py-8'>
         <div className='w-full h-fit flex flex-col items-start justify-start py-24 px-10 gap-4'>
             {navItems.map((item, id) => (
                 <Link key={id} href={item.link}
@@ -39,7 +40,7 @@ const NavMenu = () => {
                 </Link>
             ))}
         </div>
-        <div className='w-full flex items-center justify-center gap-4'>
+        <div className='w-full pb-16 md:pb-0 flex items-center justify-center gap-4'>
             {socialLinks.map((item,id) => (
                 <Link
                     key={id}
