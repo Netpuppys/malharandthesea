@@ -21,7 +21,19 @@ const eventGuests = [
         date: "Friday",
         guests: [
             {
-                name: "Ira Dubey",
+                name: "Ustad Amjad Ali Khan",
+                image: ustadAmjad
+            },
+            {
+                name: "Paresh Maity",
+                image: pareshMaity
+            },
+            {
+                name: "Shujaat Husain Khan",
+                image: ustadShujaat
+            },
+            {
+                name: "Hosted By Ira Dubey",
                 image: iraDubey
             },
             {
@@ -31,14 +43,6 @@ const eventGuests = [
             {
                 name: "Purbayan Chatterjee",
                 image: purbayaChatterjee
-            },
-            {
-                name: "Ustad Amjad Ali Khan",
-                image: ustadAmjad
-            },
-            {
-                name: "Paresh Maity",
-                image: pareshMaity
             },
             {
                 name: "Shivam Bhardwaj",
@@ -65,10 +69,6 @@ const eventGuests = [
             //     name: "Ayaan Ali Bangash",
             //     image: iraDubey
             // },
-            {
-                name: "Ustad Shujaat Husain Khan",
-                image: ustadShujaat
-            },
             {
                 name: "Rakesh Chaurasia",
                 image: rakeshChaurasia
@@ -100,7 +100,7 @@ const LineUp = () => {
     }
 
   return (
-    <div className='w-full px-20 py-10'>
+    <div className='w-full px-10 py-10'>
         <div className='w-full flex flex-col xl:flex-row items-center justify-between'>
             <h1 className='text-pink font-sans text-6xl font-extrabold'>
             LINE UP
@@ -118,9 +118,9 @@ const LineUp = () => {
             </div>
         </div>
 
-        <div className='w-full p-5 pt-10 xl:p-20 flex items-center justify-center gap-4 lg:gap-[4rem] flex-wrap'>
+        <div className='w-full p-5 pt-10 flex items-center justify-center gap-8 lg:gap-[4rem] flex-wrap'>
             {eventGuests[selectedDay].guests.slice(0, lineUpList()).map((item, id) => (
-                <div key={id} className='w-[100%] lg:w-[calc(33%-2.7rem)] xl:w-[calc(25%-3rem)] h-[28rem] xl:h-[26rem]'>
+                <div key={id} className='w-[100%] max-w-[18rem] h-[28rem] xl:h-[26rem]'>
                     <div className='w-full mb-8 aspect-square relative border-black border-r-4 border-b-4'>
                         <div className='w-full absolute top-[-1rem] left-[-1rem] aspect-square overflow-hidden '>
                             <Image

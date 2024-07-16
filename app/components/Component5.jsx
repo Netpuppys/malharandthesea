@@ -103,11 +103,11 @@ const Component5 = () => {
     const [ selectedDay, setSelectedDay ] = useState(0)
 
   return (
-    <div className='w-full relative pt-60 xl:pt-0 bg-[#F4F4F3] py-16'>
-        <div className='w-full absolute xl:relative top-0 flex justify-end px-20 h-fit'>
+    <div className='w-full relative pt-60 md:pt-80 lg:pt-0 bg-[#F4F4F3] py-16'>
+        <div className='w-full absolute lg:relative top-0 flex justify-end px-10 sm:px-20 md:px-20 h-fit'>
             <Image
                 src={ticketBg}
-                className='xl:max-w-[50%] w-[100%]'
+                className='lg:max-w-[50%] w-[100%]'
                 alt='malhaar'
             />
         </div>

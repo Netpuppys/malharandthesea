@@ -7,7 +7,7 @@ import cocktailImage from "../../public/backgrounds/cocktailImage.png"
 
 const content = [
     {
-        title: "Immersive Experience for 150 Couples",
+        title: "Immersive Experience for 200 Couples",
         subTitle: "An exclusive, intimate concert at ITC Grand Goa Resort & Spa."
     },
     {

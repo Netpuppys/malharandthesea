@@ -10,6 +10,7 @@ import Component6 from "./components/Component6";
 import Component7 from "./components/Component7";
 import LineUp from "./components/LineUp";
 import { MobileProvider } from "./utils/MobileContext";
+import Form from "./components/Form";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
           <Component6 />
           {/* <Component7 /> */}
           <LineUp />
+          <Form />
           <Footer />
         </div>
       </main>

@@ -4,12 +4,14 @@ import { useEffect, useRef, useState } from 'react';
 import banner1 from "../../public/banner/heroBanner.png";
 import banner2 from "../../public/banner/banner2.jpeg";
 import banner3 from "../../public/banner/banner3.jpeg";
+import bannerNew from "../../public/banner/bannerWithLogo.png";
 import Image from 'next/image';
 
 const images = [
-  banner1,
-  banner3,
-  banner2,
+  // banner1,
+  // banner3,
+  // banner2,
+  bannerNew
 ];
 
 const BannerCarousel = () => {
@@ -41,7 +43,7 @@ const BannerCarousel = () => {
   return (
     <div className="overflow-hidden w-full h-full relative" ref={carouselRef}>
       <div
-        className="flex w-fit h-full transition-transform duration-1000 ease-in-out overflow-x-scroll"
+        className="flex items-start justify-start w-fit h-full transition-transform duration-1000 ease-in-out overflow-y-hidden overflow-x-scroll"
         style={{ transform: `translateX(-${index * width}px)` }}
       >
         {images.map((src, i) => (

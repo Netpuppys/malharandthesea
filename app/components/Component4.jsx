@@ -1,64 +1,62 @@
 'use client'
 
-import React, { useState } from 'react'
-// import placeholder from "../../public/banner/heroBanner.png"
-import Image from 'next/image'
+import React from 'react'
 import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
+import historicImage from "../../public/banner/historical.jpeg"
 import mixologyImage from "../../public/banner/mixology.png"
+import partyImage from "../../public/banner/party.jpeg"
+import VerticalAutoCarousel from '@/components/ui/VerticalAutoCarousel';
+import ScrollText from '@/components/ui/ScrollText';
+import ScrollText2 from '@/components/ui/ScrollText2';
 
 const images = [
+    historicImage,
     mixologyImage,
-    mixologyImage,
-    mixologyImage,
-    mixologyImage,
+    partyImage,
 ]
 
-const cardContent = [
-    {
-        title: "Mixology Masterclass with Beckaly Franks",
-        content: "Join Hong Kong’s Queen of Mixology, Beckaly Franks, for an exclusive masterclass. Voted Altos Bartenders' Bartender in Asia’s 50 Best Bars 2023, Beckaly will share her expert tips and craft unforgettable cocktails. Secure your spot for this unique experience!"
-    },
+const textArray = [
+    "Discover the Hidden Gems of South Goa!",
+    "Mixology Masterclass with Beckaly Franks",
+    "After-Party: Dance into the Night"
+]
+
+const contentArray = [
+    "Step out and explore charming local spots, from cozy cafes and vibrant markets to serene beaches. Experience the true essence of South Goa and make unforgettable memories!",
+    "Join Hong Kong’s Queen of Mixology, Beckaly Franks, for an exclusive masterclass. Voted Altos Bartenders' Bartender in Asia’s 50 Best Bars 2023, Beckaly will share her expert tips and craft unforgettable cocktails. Secure your spot for this unique experience!",
+    "Join the King of Blues, Jazz, and Pop, Gary Lawyer, and London's Queen of Pop, Kaiya Maxfield, for an unforgettable, high-energy after-party. Get ready to dance till you drop!"
 ]
 
 const Component4 = () => {
-    const [ selectedImages, setSelectedImages ] = useState(images.slice(0, 4))
-    const [ currentImage, setCurrentImage ] = useState(0)
+    const updateInterval = 5000
 
   return (
-    <div className='bg-white py-24 xl:h-[40rem] flex xl:flex-row flex-col items-center justify-center gap-20 w-full'>
-        <div className='w-full xl:w-[50%] px-20 xl:px-40 flex flex-col items-start justify-center gap-10'>
-            <p className='text-pink text-[3rem] xl:text-[4.5rem] leading-none font-sans font-extrabold'>
-                {cardContent[0].title}
-            </p>
+    <div className='bg-white py-24 xl:h-[35rem] flex xl:flex-row flex-col items-center justify-center gap-20 w-full'>
+        <div className='w-full xl:w-[50%] px-20 xl:px-28 flex flex-col items-start justify-center'>
+            <div className='w-full h-[12rem]'>
+            <ScrollText
+                textArray={textArray}
+                updateInterval={updateInterval}
+                styles={"text-pink max-w-full text-wrap text-[3rem] xl:text-[4.5rem] leading-none font-sans font-extrabold"}
+            />
+            </div>
 
-            <p className='text-xl font-extralight hidden lg:block text-black text-opacity-75'>
-                {cardContent[0].content}
-            </p>
-
-            {/* <div className='h-full p-12 grid grid-cols-2 grid-rows-2 items-center justify-center gap-10'>
-            {selectedImages.map((item, index) => (
-                <div 
-                    key={index} 
-                    onClick={() => setCurrentImage(index)}
-                    className=' w-fit relative flex items-center overflow-hidden justify-center pb-2 pr-2'
-                >
-                    <Image
-                        src={item}
-                        className="max-w-[10rem] object-cover max-h-[100%]"
-                        alt="malhaar"
-                    />
-                    <div className='border-black w-[80%] border-r-2 border-b-2 h-[80%] absolute bottom-0 right-0'>.</div>
-                </div>
-            ))}
-            </div> */}
+            <div className='w-full h-[12rem]'>
+                <ScrollText2
+                    textArray={contentArray}
+                    updateInterval={updateInterval}
+                    styles={"text-xl max-w-full text-wrap font-extralight hidden lg:block text-black text-opacity-75"}
+                />
+            </div>
 
         </div>
         <div className='w-full xl:w-[50%] relative h-full flex items-center justify-center xl:justify-end'>
-            <Image
-                src={images[currentImage]}
-                className='w-[80%]'
-                alt='malhaar'
-            />
+            <div className='w-[80%] aspect-video'>
+                <VerticalAutoCarousel
+                    images={images}
+                    updateInterval={updateInterval}
+                />
+            </div>
 
             <div className='absolute xl:hidden top-0 px-5 left-0 w-full h-full flex items-center justify-between'>
                 <button
