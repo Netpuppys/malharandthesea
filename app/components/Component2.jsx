@@ -22,12 +22,12 @@ const Component2 = () => {
     <div className='w-full max-h-fit relative bg-white flex flex-col-reverse pt-[15rem] py-10 lg:py-0 lg:flex-row'>
         <div className='w-full lg:w-[50%] lg:h-[60rem]'>
             {/* top */}
-            <div className='bg-aqua absolute top-0 left-0 lg:relative font-sans w-full h-[15rem] flex items-center justify-center gap-5 py-20 px-10'>
-                <p className='text-white text-nowrap text-3xl xl:text-5xl'>
+            <div className='bg-aqua absolute top-0 left-0 lg:relative font-sans w-full h-[15rem] flex flex-col lg:flex-row items-center justify-center gap-5 py-20 px-10'>
+                <p className='text-white text-nowrap text-5xl xl:text-5xl'>
                     30-31 AUGUST, 2024
                 </p>
-                <span className='text-7xl text-black'>|</span>
-                <p className='text-black text-nowrap text-2xl xl:text-4xl font-bold'>
+                <span className='text-7xl hidden lg:block text-black'>|</span>
+                <p className='text-black text-nowrap text-3xl xl:text-4xl font-bold'>
                     ITC Grand Goa & Resort
                 </p>
             </div>

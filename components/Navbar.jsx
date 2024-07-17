@@ -28,11 +28,11 @@ const Navbar = () => {
         {isNavMenuVisible && <NavMenu />}
 
         <button
-            className="h-full overflow-visible"
+            className="h-full overflow-visible bg-black pr-4 lg:pr-7"
         >
             <Image
                 src={malhaarLogo}
-                className="object-contain w-[19vw]"
+                className="object-contain w-[26vw] lg:w-[19vw]"
                 alt="malhaar logo"
             /> 
         </button>

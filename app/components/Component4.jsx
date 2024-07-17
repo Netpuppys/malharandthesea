@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-// import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
+import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
 import historicImage from "../../public/banner/historical.jpeg"
 import mixologyImage from "../../public/banner/mixology.png"
 import partyImage from "../../public/banner/party.jpeg"

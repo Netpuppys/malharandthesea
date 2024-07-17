@@ -6,6 +6,8 @@ import banner2 from "../../public/banner/banner2.jpeg";
 import banner3 from "../../public/banner/banner3.jpeg";
 import bannerNew from "../../public/banner/bannerWithLogo.png";
 import Image from 'next/image';
+import { useMobile } from '@/app/utils/MobileContext';
+import bannerMobile from "../../public/banner/bannerMobile.jpeg"
 
 const images = [
   bannerNew,
@@ -14,7 +16,14 @@ const images = [
   banner2,
 ];
 
+const images2 = [
+  bannerMobile,
+  bannerMobile,
+  bannerMobile,
+]
+
 const BannerCarousel = () => {
+  const { isMobile } = useMobile()
   const [index, setIndex] = useState(0);
   const carouselRef = useRef(null);
   const [width, setWidth] = useState(0);
@@ -46,7 +55,7 @@ const BannerCarousel = () => {
         className="flex items-start justify-start w-fit h-full transition-transform no-scrollbar duration-1000 ease-in-out overflow-y-hidden overflow-x-scroll"
         style={{ transform: `translateX(-${index * width}px)` }}
       >
-        {images.map((src, i) => (
+        {(isMobile? images2 : images).map((src, i) => (
           <Image
             key={i}
             src={src}
