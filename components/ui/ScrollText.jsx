@@ -40,7 +40,7 @@ const ScrollText = ({ textArray, updateInterval, styles }) => {
         {textArray.map((text, i) => (
           <div
             key={i}
-            className="flex-shrink-0"
+            className={` flex-shrink-0`}
             style={{ width: dimensions.width, height: dimensions.height }}
           >
             <p className={styles}>{text}</p>

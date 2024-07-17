@@ -15,10 +15,10 @@ import Form from "./components/Form";
 export default function Home() {
   return (
     <MobileProvider>
-      <main className="min-h-screen min-w-screen bg-white md:pr-[5.75rem]">
+      <main className="min-h-screen no-scrollbar min-w-screen bg-white md:pr-[5.75rem]">
         <Sidebar />
 
-        <div className="w-full h-full">
+        <div className="w-full no-scrollbar h-full">
           <Navbar />
 
           <Banner />

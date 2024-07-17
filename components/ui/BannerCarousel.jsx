@@ -8,10 +8,10 @@ import bannerNew from "../../public/banner/bannerWithLogo.png";
 import Image from 'next/image';
 
 const images = [
+  bannerNew,
   // banner1,
-  // banner3,
-  // banner2,
-  bannerNew
+  banner3,
+  banner2,
 ];
 
 const BannerCarousel = () => {
@@ -43,7 +43,7 @@ const BannerCarousel = () => {
   return (
     <div className="overflow-hidden w-full h-full relative" ref={carouselRef}>
       <div
-        className="flex items-start justify-start w-fit h-full transition-transform duration-1000 ease-in-out overflow-y-hidden overflow-x-scroll"
+        className="flex items-start justify-start w-fit h-full transition-transform no-scrollbar duration-1000 ease-in-out overflow-y-hidden overflow-x-scroll"
         style={{ transform: `translateX(-${index * width}px)` }}
       >
         {images.map((src, i) => (
