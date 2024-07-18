@@ -1,7 +1,6 @@
 'use client'
 
-import React from 'react'
-import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
+import React, { useEffect, useState } from 'react'
 import historicImage from "../../public/banner/historical.jpeg"
 import mixologyImage from "../../public/banner/mixology.png"
 import partyImage from "../../public/banner/party.jpeg"
@@ -28,10 +27,18 @@ const contentArray = [
 ]
 
 const Component4 = () => {
+    const [ text, setText ] = useState(0)
     const updateInterval = 5000
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+          setText((prevIndex) => (prevIndex + 1) % textArray.length);
+        }, updateInterval);
+    
+        return () => clearInterval(interval);
+      }, [textArray.length, updateInterval]);
   return (
-    <div className='bg-white py-24 xl:h-[35rem] flex xl:flex-row flex-col items-center justify-center gap-20 w-full'>
+    <div className='bg-white py-20 xl:h-[35rem] flex xl:flex-row flex-col items-center justify-center gap-10 w-full'>
         <div className='w-full xl:w-[50%] px-20 xl:px-28 flex flex-col items-start justify-center'>
             <div className='w-full h-[5rem] xl:h-[12rem]'>
             <ScrollText
@@ -39,6 +46,9 @@ const Component4 = () => {
                 updateInterval={updateInterval}
                 styles={"text-pink max-w-full text-wrap text-[2.5rem] lg:text-[3.5rem] leading-none font-sans font-extrabold"}
             />
+            <p className='text-pink lg:hidden max-w-full text-wrap text-[2.5rem] lg:text-[3.5rem] leading-none font-sans font-extrabold'>
+                {textArray[text]}
+            </p>
             </div>
 
             <div className='w-full hidden xl:block h-[12rem]'>

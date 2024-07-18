@@ -150,7 +150,7 @@ const Component5 = () => {
                             {item.details}
                         </p>
                     </div>
-                    <div className='xl:w-[15%] flex items-center justify-center'>
+                    <div className='xl:w-[15%] hidden lg:flex items-center justify-center'>
                         <button className='text-3xl absolute top-10 right-0 xl:relative flex items-center justify-center uppercase font-bold text-aqua font-sans'>
                             details <VscTriangleRight />
                         </button>

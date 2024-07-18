@@ -32,7 +32,7 @@ const ScrollText = ({ textArray, updateInterval, styles }) => {
   }, [textArray.length, updateInterval]);
 
   return (
-    <div className="overflow-y-hidden overflow-x-visible w-full h-full relative" ref={carouselRef}>
+    <div className="hidden lg:block overflow-y-hidden overflow-x-visible w-full h-full relative" ref={carouselRef}>
       <div
         className="flex flex-col w-full transition-transform duration-1000 ease-in-out"
         style={{ transform: `translateY(-${index * dimensions.height}px)` }}

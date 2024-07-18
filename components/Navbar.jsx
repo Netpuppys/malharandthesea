@@ -23,12 +23,12 @@ const Navbar = () => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
   return (
-    <div className={`h-[5rem] md:h-[9.25rem] z-50 fixed md:relative w-full bg-custom-gradient pr-4 md:pr-14 flex items-center justify-between`}>
+    <div className={`h-[5rem] md:h-[9.25rem] z-50 relative w-full bg-custom-gradient pr-4 md:pr-14 flex items-center justify-between`}>
 
         {isNavMenuVisible && <NavMenu />}
 
         <button
-            className="h-full overflow-visible bg-black pr-4 lg:pr-7"
+            className="h-full overflow-visible bg-black pr-2 lg:pr-6"
         >
             <Image
                 src={malhaarLogo}

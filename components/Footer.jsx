@@ -17,7 +17,7 @@ const socialLinks = [
 const Footer = () => {
 
   return (
-    <div className='relative font-sans w-full overflow-hidden p-20 flex items-center  lg:h-[20rem] justify-center'>
+    <div className='relative font-sans w-full overflow-hidden p-10 lg:p-20 flex items-center  lg:h-[20rem] justify-center'>
         <div className='absolute z-0 flex top-0 left-0 overflow-hidden w-full h-full'>
             <Image
                 src={pinkDotBg}
@@ -39,7 +39,7 @@ const Footer = () => {
         
         <div className='w-full z-10 flex items-center justify-between flex-col lg:flex-row gap-10'>
             <div className='w-fit'>
-                <p className='font-sans mb-4 text-6xl text-white uppercase font-extrabold'>
+                <p className='font-sans mb-4 text-4xl lg:text-6xl text-white uppercase font-extrabold'>
                     reserve your slot before its too late !
                 </p>
 
@@ -50,17 +50,17 @@ const Footer = () => {
                         placeholder='enter your email'
                     />
                     <span className='w-[2px] bg-black h-[80%]'>.</span>
-                    <button className='text-black flex px-10 py-2 items-center justify-center bg-transparent text-3xl uppercase font-bold focus:outline-none'>
+                    <button className='text-black flex px-3 lg:px-10 py-2 items-center justify-center bg-transparent text-3xl uppercase font-bold focus:outline-none'>
                         Submit <IoMdArrowDropright />
                     </button>
                 </div>
             </div>
 
-            <div className=''>
+            <div className='w-full md:w-fit'>
                 <p className='text-black text-3xl font-bold mb-4'>
                     FOLLOW US
                 </p>
-                <div className='flex items-center justify-center gap-3'>
+                <div className='flex w-full items-center justify-start md:justify-center gap-3'>
                     {socialLinks.map((item, id) => (
                         <Link href={item.link} key={id} className='bg-black hover:bg-aqua text-white text-3xl w-[3.75rem] aspect-square flex items-center justify-center'>
                             {item.logo}

@@ -49,7 +49,7 @@ const Component2 = () => {
                         in association <br/> with
                     </p>
 
-                    <div className='flex items-center md:flex-col lg:flex-row justify-center gap-4 pr-10 md:pr-0 lg:pr-10'>
+                    <div className='flex items-center md:flex-col lg:flex-row justify-center gap-4 pr-5 lg:pr-10'>
                         {images.map((item, id) => (
                             <Image
                                 key={id}

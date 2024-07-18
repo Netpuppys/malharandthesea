@@ -120,7 +120,7 @@ const LineUp = () => {
 
         <div className='w-full p-5 pt-10 flex items-center justify-center gap-8 lg:gap-[4rem] flex-wrap'>
             {eventGuests[selectedDay].guests.slice(0, lineUpList()).map((item, id) => (
-                <div key={id} className='w-[100%] max-w-[18rem] h-[28rem] xl:h-[26rem]'>
+                <div key={id} className='w-[100%] max-w-[18rem] h-[28rem] xl:h-[26rem] pl-5 lg:pl-0'>
                     <div className='w-full mb-8 aspect-square relative border-black border-r-4 border-b-4'>
                         <div className='w-full absolute top-[-1rem] left-[-1rem] aspect-square overflow-hidden '>
                             <Image
