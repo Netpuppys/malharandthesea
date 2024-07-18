@@ -15,6 +15,8 @@ const socialLinks = [
 ]
 
 const Footer = () => {
+    const mobile = "9830912967"
+    const email = "mrinalini@showhouseindia.com"
 
   return (
     <div className='relative font-sans w-full overflow-hidden p-10 lg:p-20 flex items-center  lg:h-[20rem] justify-center'>
@@ -43,7 +45,7 @@ const Footer = () => {
                     reserve your slot before its too late !
                 </p>
 
-                <div className='max-w-[40rem] border-b-2 border-black flex items-center justify-center'>
+                <div className='max-w-[40rem] border-b-2 mb-4 border-black flex items-center justify-center'>
                     <input
                         type='text'
                         className='bg-transparent py-2 w-full text-3xl placeholder:text-black hover:placeholder:text-white text-white uppercase font-bold focus:outline-none'
@@ -53,6 +55,15 @@ const Footer = () => {
                     <button className='text-black flex px-3 lg:px-10 py-2 items-center justify-center bg-transparent text-3xl uppercase font-bold focus:outline-none'>
                         Submit <IoMdArrowDropright />
                     </button>
+                </div>
+
+                <div className='flex flex-col lg:flex-row lg:items-center justify-start lg:gap-10'>
+                    <p className='font-sans text-black text-2xl sm:text-3xl font-bold'>
+                        Contact Us - <span className='text-off-white'>{mobile}</span>
+                    </p>
+                    <p className='font-sans text-black text-2xl sm:text-3xl font-bold'>
+                        Email - <span className='text-off-white'>{email}</span>
+                    </p>
                 </div>
             </div>
 
