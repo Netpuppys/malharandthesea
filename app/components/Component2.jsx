@@ -1,11 +1,8 @@
 import React from 'react'
-import placeholder from "../../public/banner/heroBanner.png"
-import VerticalCarousel from '@/components/ui/VerticalCarousel'
 import itcLogo from "../../public/logos/itcLogo.png"
 import showhouseLogo from "../../public/logos/showhouseLogo.png"
 import nabLogo from "../../public/logos/nabLogo.png"
 import Image from 'next/image'
-import { useMobile } from '../utils/MobileContext'
 
 const images = [
     itcLogo,
@@ -29,13 +26,13 @@ const Component2 = () => {
                 </p>
                 <span className='text-7xl hidden lg:block text-black'>|</span>
                 <p className='text-black text-nowrap text-3xl xl:text-4xl font-bold'>
-                    ITC Grand Goa & Resort
+                    ITC Grand Goa Resort & Spa
                 </p>
             </div>
 
             <div className='w-full px-5 md:px-10 lg:h-[calc(100%-15rem)] flex flex-col items-center justify-center gap-14'>
                 {/* <VerticalCarousel images={images} /> */}
-                <iframe 
+                {/* <iframe 
                     // width="560" 
                     // height="315" 
                     className='w-full aspect-video hidden lg:block'
@@ -44,13 +41,13 @@ const Component2 = () => {
                     // frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     // referrerpolicy="strict-origin-when-cross-origin" 
-                ></iframe>
+                ></iframe> */}
                 <div className='w-full flex flex-col items-center justify-center'>
                     <p className='capitalize mb-4 md:mb-0 text-xl text-black leading-none font-light font-sans text-center'>
                         in support of
                     </p>
 
-                    <div className='flex items-center md:flex-col lg:flex-row justify-center gap-4 pr-5 lg:pr-10'>
+                    <div className='w-full flex items-center md:flex-col lg:flex-row justify-between gap-2 pr-5 lg:pr-10'>
                         {images.map((item, id) => (
                             <Image
                                 key={id}

@@ -3,19 +3,19 @@
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
-import cocktailImage from "../../public/backgrounds/cocktailImage.png"
+// import cocktailImage from "../../public/backgrounds/cocktailImage.png"
 import activity1 from "../../public/activities/activity1.jpeg"
-import activity2 from "../../public/activities/activity2.jpeg"
-import activity3 from "../../public/activities/activity3.jpeg"
-import activity4 from "../../public/activities/activity4.jpeg"
-import activity5 from "../../public/activities/activity5.jpg"
+import activity2 from "../../public/activities/activity2.jpg"
+import activity3 from "../../public/activities/activity3.jpg"
+// import activity4 from "../../public/activities/activity4.jpeg"
+// import activity5 from "../../public/activities/activity5.jpg"
 
 const images = [
-    activity1,
     activity2,
     activity3,
-    activity4,
-    activity5,
+    activity1,
+    // activity4,
+    // activity5,
 ]
 
 const content = [
@@ -27,14 +27,14 @@ const content = [
         title: "Musical Odyssey Across Genres",
         subTitle: "From Indian classical to Portuguese Fado, a diverse lineup awaits."
     },
-    {
-        title: "Artistic Fusion and Unique Collaborations",
-        subTitle: "Witness innovative jugalbandis and live art creation."
-    },
-    {
-        title: "Cultural Kaleidoscope of Goa",
-        subTitle: "International and Indian artists unite in celebration of Goa's cultural tapestry."
-    },
+    // {
+    //     title: "Artistic Fusion and Unique Collaborations",
+    //     subTitle: "Witness innovative jugalbandis and live art creation."
+    // },
+    // {
+    //     title: "Cultural Kaleidoscope of Goa",
+    //     subTitle: "International and Indian artists unite in celebration of Goa's cultural tapestry."
+    // },
     {
         title: "Art with Impact",
         subTitle: "Auctioning Paresh Maity's painting to support the visually impaired community in Goa."
@@ -86,7 +86,7 @@ const Component6 = () => {
     }
 
   return (
-    <div className='w-full h-[20rem] xl:h-[40rem] overflow-hidden relative flex items-center justify-center px-10'>
+    <div className='w-full h-[20rem] lg:h-[40rem] overflow-hidden relative flex items-center justify-center px-10'>
         {/* <Image
             src={cocktailImage}
             className='object-cover h-full w-full z-0 absolute top-0 left-0'
@@ -102,16 +102,16 @@ const Component6 = () => {
                     key={i}
                     src={src}
                     alt={`Slide ${i}`}
-                    className="w-screen opacity-60 md:w-[calc(100vw-5.75rem)] min-h-full max-w-none shadow-inset-custom object-cover"
+                    className="w-screen opacity-50 md:w-[calc(100vw-5.75rem)] min-h-full max-w-none shadow-inset-custom object-cover"
                 />
                 ))}
             </div>
         </div>
         <div className='h-[70%] flex flex-col z-10 items-center justify-between gap-4 xl:gap-10 xl:px-24'>
-            <h1 className='text-pink drop-shadow-lg text-center max-w-[60rem] text-4xl xl:text-8xl font-sans font-extrabold'>
+            <h1 className='text-pink drop-shadow-lg text-center max-w-[55rem] text-4xl lg:text-8xl font-sans font-extrabold'>
                 {content[currentData].title}
             </h1>
-            <h4 className='text-white drop-shadow-lg text-center max-w-[50rem] text-2xl xl:text-5xl font-sans font-bold text-wrap'>
+            <h4 className='text-white drop-shadow-lg text-center max-w-[45rem] text-2xl lg:text-5xl font-sans font-bold text-wrap'>
                 {content[currentData].subTitle}
             </h4>
 

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import historicImage from "../../public/banner/historical.jpeg"
 import mixologyImage from "../../public/banner/mixology.png"
-import partyImage from "../../public/banner/party.jpeg"
+import partyImage from "../../public/banner/concertSlide.jpg"
 import VerticalAutoCarousel from '@/components/ui/VerticalAutoCarousel';
 import ScrollText from '@/components/ui/ScrollText';
 import ScrollText2 from '@/components/ui/ScrollText2';
@@ -28,7 +28,7 @@ const contentArray = [
 
 const Component4 = () => {
     const [ text, setText ] = useState(0)
-    const updateInterval = 5000
+    const updateInterval = 10000
 
     useEffect(() => {
         const interval = setInterval(() => {

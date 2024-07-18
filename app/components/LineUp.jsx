@@ -14,6 +14,7 @@ import ustadShujaat from "../../public/guests/ustadShujaat.jpeg"
 import rakeshChaurasia from "../../public/guests/RakeshChaurasia.jpg"
 import garryLawyer from "../../public/guests/GarryLawyer.jpeg"
 import amaanAndAyaan from "../../public/guests/amaanAndAyaan.jpeg"
+import kaiyaMaxfield from "../../public/guests/kaiyaMaxfield.jpg"
 import { useMobile } from '../utils/MobileContext'
 
 const eventGuests = [
@@ -79,7 +80,7 @@ const eventGuests = [
             },
             {
                 name: "Kaiya Maxfield",
-                image: iraDubey
+                image: kaiyaMaxfield
             }
         ]
     }

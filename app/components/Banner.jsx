@@ -1,6 +1,4 @@
 import React from 'react'
-import bannerImg from "../../public/banner/heroBanner.png"
-import Image from 'next/image'
 import BannerCarousel from '@/components/ui/BannerCarousel'
 
 const Banner = () => {

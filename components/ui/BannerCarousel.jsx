@@ -1,15 +1,14 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react';
-import banner1 from "../../public/banner/heroBanner.png";
-import banner2 from "../../public/banner/banner2.jpeg";
-import banner3 from "../../public/banner/banner3.jpeg";
-import bannerNew from "../../public/banner/bannerWithLogo.png";
+import bannerNew from "../../public/banner/1.png";
+import banner2 from "../../public/banner/2.png";
+import banner3 from "../../public/banner/3.png";
 import Image from 'next/image';
 import { useMobile } from '@/app/utils/MobileContext';
-import bannerMobile from "../../public/banner/bannerMobile.jpeg"
-import bannerMobile2 from "../../public/banner/bannerMobile2.jpeg"
-import bannerMobile3 from "../../public/banner/bannerMobile3.jpeg"
+import bannerMobile from "../../public/banner/bannerMobile1.png"
+import bannerMobile2 from "../../public/banner/bannerMobile2.png"
+import bannerMobile3 from "../../public/banner/bannerMobile3.png"
 
 const images = [
   bannerNew,
@@ -62,7 +61,7 @@ const BannerCarousel = () => {
             key={i}
             src={src}
             alt={`Slide ${i}`}
-            className="w-screen md:w-[calc(100vw-5.75rem)] min-h-full max-w-none object-cover"
+            className="w-screen md:w-[calc(100vw-5.75rem)] h-full max-w-none object-fill"
           />
         ))}
       </div>
