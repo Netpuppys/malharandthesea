@@ -46,7 +46,7 @@ const Component2 = () => {
                     // referrerpolicy="strict-origin-when-cross-origin" 
                 ></iframe>
                 <div className='w-full flex flex-col items-center justify-center'>
-                    <p className='uppercase text-xl text-black leading-none font-light font-sans text-center'>
+                    <p className='capitalize mb-4 md:mb-0 text-xl text-black leading-none font-light font-sans text-center'>
                         in support of
                     </p>
 
