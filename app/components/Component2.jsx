@@ -5,6 +5,7 @@ import itcLogo from "../../public/logos/itcLogo.png"
 import showhouseLogo from "../../public/logos/showhouseLogo.png"
 import nabLogo from "../../public/logos/nabLogo.png"
 import Image from 'next/image'
+import { useMobile } from '../utils/MobileContext'
 
 const images = [
     itcLogo,
@@ -46,7 +47,7 @@ const Component2 = () => {
                 ></iframe>
                 <div className='w-full flex flex-col items-center justify-center'>
                     <p className='uppercase text-xl text-black leading-none font-light font-sans text-center'>
-                        in association <br/> with
+                        in support of
                     </p>
 
                     <div className='flex items-center md:flex-col lg:flex-row justify-center gap-4 pr-5 lg:pr-10'>
