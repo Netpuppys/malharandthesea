@@ -8,6 +8,8 @@ import bannerNew from "../../public/banner/bannerWithLogo.png";
 import Image from 'next/image';
 import { useMobile } from '@/app/utils/MobileContext';
 import bannerMobile from "../../public/banner/bannerMobile.jpeg"
+import bannerMobile2 from "../../public/banner/bannerMobile2.jpeg"
+import bannerMobile3 from "../../public/banner/bannerMobile3.jpeg"
 
 const images = [
   bannerNew,
@@ -16,10 +18,10 @@ const images = [
   banner2,
 ];
 
-const images2 = [
+const imagesMobile = [
+  bannerMobile2,
   bannerMobile,
-  bannerMobile,
-  bannerMobile,
+  bannerMobile3,
 ]
 
 const BannerCarousel = () => {
@@ -55,7 +57,7 @@ const BannerCarousel = () => {
         className="flex items-start justify-start w-fit h-full transition-transform no-scrollbar duration-1000 ease-in-out overflow-y-hidden overflow-x-scroll"
         style={{ transform: `translateX(-${index * width}px)` }}
       >
-        {(isMobile? images2 : images).map((src, i) => (
+        {(isMobile? imagesMobile : images).map((src, i) => (
           <Image
             key={i}
             src={src}
