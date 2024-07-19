@@ -1,14 +1,14 @@
 import React from 'react'
 import { VscTriangleRight } from "react-icons/vsc";
 
-const Form = () => {
+const Form = ({ contactRef }) => {
   return (
-    <div className='w-full bg-white py-10 px-10 md:px-20'>
+    <div ref={contactRef} className='w-full bg-white py-10 px-10 md:px-20'>
         <p className='text-pink text-6xl font-sans font-extrabold'>
             HAVE QUESTIONS? CONTACT US!
         </p>
         
-        <div className='mt-10 px-10 w-full flex flex-col xl:flex-row gap-4 md:gap-6'>
+        <div className='mt-10 px-5 w-full flex flex-col xl:flex-row gap-4 md:gap-6'>
             <div className='w-full xl:w-1/2 h-fit flex flex-wrap items-center justify-center gap-6 gap-y-4'>
                 <input
                     type='text'

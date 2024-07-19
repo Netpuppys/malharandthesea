@@ -11,29 +11,41 @@ import NavMenu from "./NavMenu"
 const links = [
     {
         name: "Facebook",
-        link: "/"
+        link: "https://www.facebook.com/profile.php?id=61561406462648"
     },
     {
         name: "Instagram",
-        link: "/"
+        link: "https://www.instagram.com/showhouseindia/"
     },
 ]
 
-const Navbar = () => {
+const Navbar = ({ 
+    eventsRef,
+    lineUpRef,
+    contactRef,
+    scrollToSection
+}) => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
   return (
-    <div className={`h-[10rem] md:h-[9.25rem] z-50 relative w-full bg-custom-gradient md:pr-14 flex items-center justify-between`}>
+    <div className={`fixed md:relative h-[10rem] md:h-[9.25rem] z-50 w-full bg-custom-gradient md:pr-14 flex items-center justify-between`}>
 
-        {isNavMenuVisible && <NavMenu />}
+        {isNavMenuVisible && 
+            <NavMenu 
+                eventsRef={eventsRef}
+                lineUpRef={lineUpRef}
+                contactRef={contactRef}
+                scrollToSection={scrollToSection}
+                setIsNavMenuVisible={setIsNavMenuVisible}
+            />}
 
         <button
-            className="h-full w-[7.875rem] lg:w-fit overflow-visible"
+            className="h-full w-[7.875rem] md:w-fit overflow-visible"
         >
-            <div className="h-full w-full bg-white lg:bg-black lg:w-[20vw] lg:h-fit pb-0 lg:pr-4 lg:pb-4">
+            <div className="h-full w-full bg-white md:bg-black md:w-[20vw] md:h-fit pb-0 md:pr-4 md:pb-4">
                 <Image
                     src={malhaarLogo}
-                    className="object-fill lg:w-full"
+                    className="object-fill md:w-full"
                     alt="malhaar logo"
                 /> 
             </div>
@@ -41,19 +53,17 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center justify-center gap-6">
             {links.map((link, id) => (
-                <Link key={id} href={link.link} className="uppercase text-white text-3xl font-sans font-bold">
+                <Link key={id} target="blank" href={link.link} className="uppercase text-white text-3xl font-sans font-bold">
                     {link.name}
                 </Link>
             ))}
 
-            <button 
-                className="uppercase ml-4 font-sans text-3xl text-white font-bold py-3 px-6 bg-aqua"
-            >
-                TICKETS
+            <button className='z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'>
+                BUY TICKETS
             </button>
         </div>
 
-        <div className="lg:hidden bg-transparent w-[calc(100%-7.875rem)] h-full">
+        <div className="md:hidden bg-transparent w-[calc(100%-7.875rem)] h-full">
             <div className="w-full h-1/2 border-l-2 border-white flex items-center justify-end pr-4">
                 <button 
                     className=" md:hidden"

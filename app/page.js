@@ -1,3 +1,5 @@
+'use client'
+
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import Banner from "./components/Banner";
@@ -11,26 +13,53 @@ import Component7 from "./components/Component7";
 import LineUp from "./components/LineUp";
 import { MobileProvider } from "./utils/MobileContext";
 import Form from "./components/Form";
+import { useRef } from "react";
 
 export default function Home() {
+  const eventsRef = useRef(null)
+  const lineUpRef = useRef(null)
+  const contactRef = useRef(null)
+
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <MobileProvider>
       <main className="min-h-screen no-scrollbar min-w-screen bg-white md:pr-[5.75rem]">
-        <Sidebar />
+        <Sidebar
+          eventsRef={eventsRef}
+          lineUpRef={lineUpRef}
+          contactRef={contactRef}
+          scrollToSection={scrollToSection}
+        />
 
         <div className="w-full no-scrollbar h-full">
-          <Navbar />
+          <Navbar 
+            eventsRef={eventsRef}
+            lineUpRef={lineUpRef}
+            contactRef={contactRef}
+            scrollToSection={scrollToSection}
+          />
 
           <Banner />
           {/* <Banner /> */}
           <Component2 />
           <Component3 />
           <Component4 />
-          <Component5 />
+          <Component5
+            eventsRef={eventsRef}
+          />
           <Component6 />
           {/* <Component7 /> */}
-          <LineUp />
-          <Form />
+          <LineUp 
+            lineUpRef={lineUpRef}
+          />
+          <Form
+            contactRef={contactRef}
+          />
           <Footer />
         </div>
       </main>

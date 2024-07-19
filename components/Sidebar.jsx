@@ -8,14 +8,24 @@ import NavMenu from "./NavMenu";
 import { IoMdClose } from "react-icons/io";
 import bmsBtn from "../public/sidebar/bmsBtn.png"
 
-const Sidebar = () => {
+const Sidebar = ({
+    eventsRef,
+    lineUpRef,
+    contactRef,
+    scrollToSection
+}) => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
   return (
     <div className="w-[5.75rem] hidden md:block h-screen fixed top-0 overflow-visible right-0 z-[99] bg-off-white">
 
-        {isNavMenuVisible && <NavMenu />}
-        {console.log(isNavMenuVisible)}
+        {isNavMenuVisible && <NavMenu 
+            eventsRef={eventsRef}
+            lineUpRef={lineUpRef}
+            contactRef={contactRef}
+            scrollToSection={scrollToSection}
+            setIsNavMenuVisible={setIsNavMenuVisible}
+        />}
 
         <button 
             onClick={() => setIsNavMenuVisible(prev => !prev)}
