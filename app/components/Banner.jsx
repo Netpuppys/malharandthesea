@@ -14,7 +14,7 @@ const Banner = () => {
         <BannerCarousel />
       </div>
 
-        <button className='absolute bottom-[4.4rem] left-20 md:left-44 z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'>
+        <button className='hidden lg:block absolute bottom-[4.4rem] left-20 md:left-44 z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'>
             BUY TICKETS
         </button>
     </div>

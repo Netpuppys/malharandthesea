@@ -11,7 +11,7 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        'custom-gradient': 'linear-gradient(90deg, #8bfce0 50%, #000000 100%)',
+        'custom-gradient': 'linear-gradient(90deg, #8bfce0 30%, #000000 100%)',
       },
       boxShadow: {
         'inset-custom': 'inset 0px 0px 300px 0px rgba(0, 0, 0, 1)',

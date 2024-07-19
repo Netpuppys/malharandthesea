@@ -40,7 +40,7 @@ const Component4 = () => {
   return (
     <div className='bg-white py-20 xl:h-[35rem] flex xl:flex-row flex-col items-center justify-center gap-10 w-full'>
         <div className='w-full xl:w-[50%] px-20 xl:px-28 flex flex-col items-start justify-center'>
-            <div className='w-full h-[5rem] xl:h-[12rem]'>
+            <div className='w-full h-[5rem] flex items-center justify-center xl:h-[12rem]'>
             <ScrollText
                 textArray={textArray}
                 updateInterval={updateInterval}

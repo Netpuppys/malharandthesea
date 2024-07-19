@@ -18,9 +18,9 @@ const images = [
 ];
 
 const imagesMobile = [
-  // bannerMobile2,
+  bannerMobile2,
   bannerMobile,
-  // bannerMobile3,
+  bannerMobile3,
 ]
 
 const BannerCarousel = () => {
@@ -42,13 +42,13 @@ const BannerCarousel = () => {
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 3000); // Change image every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="overflow-hidden w-full h-full relative" ref={carouselRef}>
