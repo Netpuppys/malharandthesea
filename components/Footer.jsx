@@ -12,7 +12,7 @@ const socialLinks = [
     { logo: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=61561406462648" },
     { logo: <FaSquareThreads />, link: "https://www.threads.net/@showhouseindia?xmt=AQGzgo8oWmk5WLHxlIjHmc_PMHGUs4TW4y8g9IMcDjjm2-0" },
     { logo: <FaInstagram />, link: "https://www.instagram.com/showhouseindia/" },
-    { logo: <TfiYoutube />, link: "/" },
+    // { logo: <TfiYoutube />, link: "/" },
 ]
 
 const Footer = () => {
@@ -68,11 +68,11 @@ const Footer = () => {
                 </div>
 
                 <div className='flex flex-col lg:flex-row lg:items-center justify-start lg:gap-10'>
-                    <p className='font-sans text-black text-2xl sm:text-3xl font-bold flex items-center justify-center'>
+                    <p className='font-sans text-black text-xl sm:text-2xl font-bold flex items-center justify-start'>
                         Contact Us - <span className='text-off-white'>{mobile}</span>
                         <span onClick={() => copyToClipboard(mobile)} className='ml-3 text-xl'><FaCopy /></span>
                     </p>
-                    <p className='font-sans text-black text-2xl sm:text-3xl font-bold flex items-center justify-center'>
+                    <p className='font-sans text-black text-xl sm:text-2xl font-bold flex items-center justify-start'>
                         Email - <span className='text-off-white'>{email}</span> 
                         <span onClick={() => copyToClipboard(email)} className='ml-3 text-xl'><FaCopy /></span>
                     </p>

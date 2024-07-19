@@ -77,7 +77,7 @@ const Navbar = ({
                 </button>
             </div>
             <div className="w-full h-1/2">
-                <button className='w-full h-full z-30 bg-[#E91AB0] border-white px-8 py-3 text-4xl text-white font-sans font-bold'>
+                <button className='w-full h-full z-30 bg-[#E91AB0] border-l-2 border-white px-8 py-3 text-4xl text-white font-sans font-bold'>
                     BUY TICKETS
                 </button>
             </div>
