@@ -28,7 +28,7 @@ const cardData = [
 const Component3 = () => {
   return (
     <div className='flex flex-col bg-off-white items-center justify-center py-24 w-full'>
-        <p className='mb-10 text-7xl text-center lg:text-left font-sans text-pink font-extrabold'>
+        <p className='mb-10 text-5xl lg:text-7xl text-center lg:text-left font-sans text-pink font-extrabold'>
             A 5 STAR MUSICAL EVENT
         </p>
 

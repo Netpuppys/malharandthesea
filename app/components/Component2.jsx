@@ -31,17 +31,14 @@ const Component2 = () => {
             </div>
 
             <div className='w-full px-5 md:px-10 lg:h-[calc(100%-15rem)] flex flex-col items-center justify-center gap-14'>
-                {/* <VerticalCarousel images={images} /> */}
-                <iframe 
-                    // width="560" 
-                    // height="315" 
-                    className='w-full aspect-video hidden lg:block'
-                    src="https://www.youtube.com/embed/H1CIBqDeWQ0?si=lx9pxBGex6JcNJ6v" 
-                    // title="YouTube video player" 
-                    // frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    // referrerpolicy="strict-origin-when-cross-origin" 
-                ></iframe>
+                <video
+                    src='https://res.cloudinary.com/dkrinlbmx/video/upload/v1721373817/MALHAR_REEL_1_otrubl.mp4'
+                    className='w-full'
+                    autoPlay
+                    muted
+                    controls
+                />
+
                 <div className='w-full flex flex-col items-center justify-center'>
                     <p className='capitalize mb-4 md:mb-0 text-xl text-black leading-none font-light font-sans text-center'>
                         in support of

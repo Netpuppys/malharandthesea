@@ -38,7 +38,7 @@ const Form = () => {
                     placeholder='Message'
                     className='w-full h-44 p-4 border-2 border-gray-300 placeholder:text-gray-500 text-2xl focus:outline-none'
                 />
-                <div className='w-full mt-5 flex items-center justify-end'>
+                <div className='w-full mt-5 flex items-center justify-start lg:justify-end'>
                     <button className='text-3xl tracking-tight font-bold font-sans text-aqua flex items-center justify-center'>
                         SUBMIT FORM <VscTriangleRight />
                     </button>
