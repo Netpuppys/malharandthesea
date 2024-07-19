@@ -1,25 +1,24 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react';
-import bannerNew from "../../public/banner/1.png";
+import banner1 from "../../public/banner/1.png";
 import banner2 from "../../public/banner/2.png";
 import banner3 from "../../public/banner/3.png";
 import Image from 'next/image';
 import { useMobile } from '@/app/utils/MobileContext';
-import bannerMobile from "../../public/banner/bannerMobile1.png"
+import bannerMobile1 from "../../public/banner/bannerMobile1.png"
 import bannerMobile2 from "../../public/banner/bannerMobile2.png"
 import bannerMobile3 from "../../public/banner/bannerMobile3.png"
 
 const images = [
-  bannerNew,
-  // banner1,
+  banner1,
   banner3,
   banner2,
 ];
 
 const imagesMobile = [
+  bannerMobile1,
   bannerMobile2,
-  bannerMobile,
   bannerMobile3,
 ]
 
