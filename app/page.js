@@ -45,7 +45,6 @@ export default function Home() {
           />
 
           <Banner />
-          {/* <Banner /> */}
           <Component2 />
           <Component3 />
           <Component4 />
@@ -53,7 +52,6 @@ export default function Home() {
             eventsRef={eventsRef}
           />
           <Component6 />
-          {/* <Component7 /> */}
           <LineUp 
             lineUpRef={lineUpRef}
           />

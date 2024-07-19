@@ -42,7 +42,7 @@ const Navbar = ({
         <button
             className="h-full w-[7.875rem] md:w-fit overflow-visible"
         >
-            <div className="h-full w-full bg-white md:bg-black md:w-[20vw] md:h-fit pb-0 md:pr-4 md:pb-4">
+            <div className="h-full w-full bg-white md:bg-black md:w-[20vw] md:h-fit pb-0 md:pr-2 md:pb-2">
                 <Image
                     src={malhaarLogo}
                     className="object-fill md:w-full"
