@@ -44,7 +44,7 @@ const BannerCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 5000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -60,7 +60,7 @@ const BannerCarousel = () => {
             key={i}
             src={src}
             alt={`Slide ${i}`}
-            className="w-screen md:w-[calc(100vw-5.75rem)] h-full max-w-none object-fill"
+            className="w-screen md:w-[calc(80vw-5.75rem)] h-full max-w-none object-fill"
           />
         ))}
       </div>

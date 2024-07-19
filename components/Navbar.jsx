@@ -20,15 +20,17 @@ const links = [
 ]
 
 const Navbar = ({ 
+    logoRef,
     eventsRef,
     lineUpRef,
     contactRef,
-    scrollToSection
+    scrollToSection,
+    navBtnHover
 }) => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
   return (
-    <div className={`fixed md:relative h-[10rem] md:h-[9.25rem] z-50 w-full bg-custom-gradient md:pr-14 flex items-center justify-between`}>
+    <div style={navBtnHover ? { paddingRight: "20rem" } : {}} className={`fixed md:relative h-[10rem] md:h-[9.25rem] z-50 w-full bg-custom-gradient md:pr-14 flex items-center justify-between`}>
 
         {isNavMenuVisible && 
             <NavMenu 
@@ -42,10 +44,10 @@ const Navbar = ({
         <button
             className="h-full w-[7.875rem] md:w-fit overflow-visible"
         >
-            <div className="h-full w-full bg-white md:bg-black md:w-[20vw] md:h-fit pb-0 md:pr-2 md:pb-2">
+            <div ref={logoRef} className="h-full  w-full bg-white md:bg-black md:w-[20vw] md:h-fit pb-0 md:pr-2 md:pb-2">
                 <Image
                     src={malhaarLogo}
-                    className="object-fill md:w-full"
+                    className="object-fill md:w-full h-full md:max-h-[430px]"
                     alt="malhaar logo"
                 /> 
             </div>

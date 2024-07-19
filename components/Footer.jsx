@@ -3,20 +3,30 @@ import pinkDotBg from "../public/backgrounds/pinkDotBg.png"
 import Image from 'next/image'
 import { IoMdArrowDropright } from "react-icons/io";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaSquareThreads, FaXTwitter } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi";
+import { FaCopy } from "react-icons/fa6";
 import Link from 'next/link';
 
 const socialLinks = [
-    { logo: <FaFacebookF />, link: "/" },
-    { logo: <FaXTwitter />, link: "/" },
-    { logo: <FaInstagram />, link: "/" },
+    { logo: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=61561406462648" },
+    { logo: <FaSquareThreads />, link: "https://www.threads.net/@showhouseindia?xmt=AQGzgo8oWmk5WLHxlIjHmc_PMHGUs4TW4y8g9IMcDjjm2-0" },
+    { logo: <FaInstagram />, link: "https://www.instagram.com/showhouseindia/" },
     { logo: <TfiYoutube />, link: "/" },
 ]
 
 const Footer = () => {
     const mobile = "9830912967"
     const email = "mrinalini@showhouseindia.com"
+
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text).then(() => {
+          alert(`Copied ${text} to clipboard!`);
+        }).catch((err) => {
+          console.error('Could not copy text: ', err);
+        });
+      };
+    
 
   return (
     <div className='relative font-sans w-full overflow-hidden p-10 lg:p-20 flex items-center  lg:h-[20rem] justify-center'>
@@ -58,11 +68,13 @@ const Footer = () => {
                 </div>
 
                 <div className='flex flex-col lg:flex-row lg:items-center justify-start lg:gap-10'>
-                    <p className='font-sans text-black text-2xl sm:text-3xl font-bold'>
+                    <p className='font-sans text-black text-2xl sm:text-3xl font-bold flex items-center justify-center'>
                         Contact Us - <span className='text-off-white'>{mobile}</span>
+                        <span onClick={() => copyToClipboard(mobile)} className='ml-3 text-xl'><FaCopy /></span>
                     </p>
-                    <p className='font-sans text-black text-2xl sm:text-3xl font-bold'>
-                        Email - <span className='text-off-white'>{email}</span>
+                    <p className='font-sans text-black text-2xl sm:text-3xl font-bold flex items-center justify-center'>
+                        Email - <span className='text-off-white'>{email}</span> 
+                        <span onClick={() => copyToClipboard(email)} className='ml-3 text-xl'><FaCopy /></span>
                     </p>
                 </div>
             </div>

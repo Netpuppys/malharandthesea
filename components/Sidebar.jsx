@@ -12,7 +12,8 @@ const Sidebar = ({
     eventsRef,
     lineUpRef,
     contactRef,
-    scrollToSection
+    scrollToSection,
+    setNavBtnHover
 }) => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
@@ -28,6 +29,8 @@ const Sidebar = ({
         />}
 
         <button 
+            onMouseOver={() => setNavBtnHover(true)}
+            onMouseLeave={() => setNavBtnHover(false)}
             onClick={() => setIsNavMenuVisible(prev => !prev)}
             className="group relative overflow-visible w-full h-[9.25rem] max-h-[9.25rem]"
         >
