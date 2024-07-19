@@ -107,7 +107,7 @@ const Component6 = () => {
                 ))}
             </div>
         </div>
-        <div className='h-[70%] flex flex-col z-10 items-center justify-between gap-4 xl:gap-10 xl:px-24'>
+        <div className='h-[70%] flex flex-col z-10 px-8 items-center justify-between gap-4 xl:gap-10 xl:px-24'>
             <h1 className='text-pink drop-shadow-lg text-center max-w-[55rem] text-4xl lg:text-8xl font-sans font-extrabold'>
                 {content[currentData].title}
             </h1>

@@ -32,7 +32,7 @@ const Component3 = () => {
             A 5 STAR MUSICAL EVENT
         </p>
 
-        <div className='flex flex-col lg:flex-row items-center gap-10 lg:gap-0 justify-center px-10 xl:px-48'>
+        <div className='flex w-full flex-col lg:flex-row items-center gap-10 lg:gap-0 justify-center px-10 xl:px-48'>
             {cardData.map((item, index) => (
                 <div key={index} className='flex lg:h-[30rem] xl:h-[26rem] flex-col relative items-center justify-start px-10 gap-5 lg:gap-3'>
                     {/* <Image
