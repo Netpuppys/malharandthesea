@@ -56,7 +56,7 @@ const NavMenu = ({
                 </button>
             ))}
         </div>
-        <div className='w-full pb-16 md:pb-0 flex items-center justify-center gap-4'>
+        <div className='w-full pb-40 md:pb-0 flex items-center justify-center gap-4'>
             {socialLinks.map((item, id) => (
                 <Link
                     key={id}
