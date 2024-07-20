@@ -68,19 +68,6 @@ const Component4 = () => {
                 />
             </div>
 
-            {/* <div className='absolute xl:hidden top-0 px-5 left-0 w-full h-full flex items-center justify-between'>
-                <button
-                    className='text-3xl text-black'
-                >
-                    <VscTriangleLeft />
-                </button>
-
-                <button
-                    className='text-3xl text-black'
-                >
-                    <VscTriangleRight />
-                </button>
-            </div> */}
         </div>
     </div>
   )

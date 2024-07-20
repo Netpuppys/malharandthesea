@@ -5,9 +5,9 @@ import { VscTriangleRight } from "react-icons/vsc";
 import emailjs from '@emailjs/browser';
 
 const Form = ({ contactRef }) => {
-    // const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID
-    // const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID
-    // const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -30,38 +30,38 @@ const Form = ({ contactRef }) => {
       const handleSubmit = (e) => {
         e.preventDefault();
         setIsLoader(true)
-        // const { firstName, lastName, phoneNumber, email, message } = formData;
+        const { firstName, lastName, phoneNumber, email, message } = formData;
 
-        // const templateParams = {
-        //     firstName,
-        //     lastName,
-        //     phoneNumber,
-        //     email,
-        //     message
-        // };
+        const templateParams = {
+            firstName,
+            lastName,
+            phoneNumber,
+            email,
+            message
+        };
     
-        // emailjs
-        //     .send(serviceId, templateId, templateParams, {
-        //     publicKey: publicKey,
-        //   })
+        emailjs
+            .send(serviceId, templateId, templateParams, {
+            publicKey: publicKey,
+          })
 
-        //   .then((response) => {
-        //     console.log('SUCCESS!', response.status, response.text);
-        //     setIsLoader(false)
-        //     alert('Message sent successfully!');
-        //     setFormData({
-        //       firstName: '',
-        //       lastName: '',
-        //       phoneNumber: '',
-        //       email: '',
-        //       message: ''
-        //     });
-        //   })
-        //   .catch((error) => {
-        //     console.log('FAILED...', error);
-        //     setIsLoader(false)
-        //     alert('Message failed to send.');
-        //   });
+          .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            setIsLoader(false)
+            alert('Message sent successfully!');
+            setFormData({
+              firstName: '',
+              lastName: '',
+              phoneNumber: '',
+              email: '',
+              message: ''
+            });
+          })
+          .catch((error) => {
+            console.log('FAILED...', error);
+            setIsLoader(false)
+            alert('Message failed to send.');
+          });
       };
     
 

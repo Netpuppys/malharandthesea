@@ -3,12 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
-// const images = [
-//   banner1,
-//   banner3,
-//   banner2,
-// ];
-
 const VerticalAutoCarousel = ({ images, updateInterval }) => {
   const [index, setIndex] = useState(0);
   const carouselRef = useRef(null);
