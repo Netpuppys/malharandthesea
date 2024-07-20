@@ -62,6 +62,7 @@ const Navbar = ({
 
             <Link 
                 href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
+                target="blank"
                 className='z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'
             >
                 BUY TICKETS

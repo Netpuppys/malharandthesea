@@ -4,7 +4,7 @@ import BannerSmall from '@/components/ui/BannerSmall'
 
 const Banner = ({ logoPadding }) => {
   return (
-    <div className='w-full pt-[10rem] md:pt-0 relative flex items-center justify-center overflow-hidden md:min-h-[800px] md:h-[calc(100vh-9.25rem)]'>
+    <div className='w-full pt-[10rem] md:pt-0 relative flex items-center justify-center overflow-hidden md:min-h-[850px] md:h-[calc(100vh-9.25rem)]'>
       <div className='relative w-full h-full flex items-center justify-center'>
 
         <div className='shadow-inset-custom bg-black w-full h-full absolute left-0 top-0'></div>

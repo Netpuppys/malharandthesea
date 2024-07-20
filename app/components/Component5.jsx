@@ -18,32 +18,32 @@ const eventTimeline = [
             {
                 time: "4:30 PM",
                 title: "Hi-Tea",
-                details: "Hosted by Ira Dubey. Meet and mingle over tea amidst the rain and sea."
+                details: "Prolific stage and film actor Ira Dubey welcomes the guests to a Hi-Tea where the guests get to know each other over informal and lively conversations amidst the pitter patter of the rain on the sea."
             },
             {
                 time: "5:00 PM – 6:30 PM",
                 title: "Saaz Aur Awaaz",
-                details: "Kaushiki Chakraborty and Purbayan Chatterjee. Solo performances followed by a unique jugalbandi."
+                details: "Individual solos followed by innovative jugalbandi by Kaushiki & Purbayan. The perfect way to start the amazing music festival amidst the sound of the thunder, rain and the waves crashing on the beach."
             },
             {
                 time: "7:00 PM – 8:30 PM",
                 title: "Strokes and Strings",
-                details: "Ustad Amjad Ali Khan and Paresh Maity. Sarod performance by Ustad Amjad Ali Khan with live painting by Paresh Maity."
+                details: "The sarod maestro Ustad Amjad Ali Khan strikes the chords with various ragas. Paresh Maity’s canvas comes alive with the inspiration of the ragas, monsoon & the sea… a feast for the senses, a perfect jugalbandi of art and music."
             },
             {
                 time: "8:30 PM",
                 title: "Art with a Heart",
-                details: "Silent auction of Paresh Maity’s artwork, with proceeds supporting NAB – National Association for the Blind."
+                details: "The masterpiece just created by Paresh Maity will be put up for a silent auction, and the proceeds shall be donated to NAB – National Association for the Blind."
             },
             {
                 time: "8:30 PM onwards",
                 title: "Jugalbandi of Flavours and Spirits",
-                details: "Exotic coastal cuisine by ITC Grand Goa chefs paired with fine beverages."
+                details: "Exotic coastal cuisine curated by the master chefs of ITC Grand Goa and paired with the choicest beverages."
             },
             {
                 time: "10:00 PM onwards",
                 title: "Sufi Qawwali Performance",
-                details: "Shivam Bhardwaj. Energetic Sufi Qawwali performance to end the night."
+                details: "Shivam Bhardwaj is the next shining beacon in the world of Sufi music. He has sung for the legendary music director A R Rahman, Sting, Lucky Ali, and Salim-Suleiman. As this prodigal artist sets the night on fire, get ready to dance to a soulful and high energy performance of Sufi Qawwali."
             }
         ]
     },
@@ -53,37 +53,37 @@ const eventTimeline = [
             {
                 time: "10:00 AM onwards",
                 title: "Free Time",
-                details: "Explore South Goa or join a cocktail masterclass with Beckaly Franks."
+                details: "Step out and discover the quaint local spots of South Goa or, head to an immersive cocktail masterclass with bartending maestro, Beckaly Franks"
             },
             {
                 time: "12:00 PM – 1:00 PM",
                 title: "Mixology Masterclass",
-                details: "Learn cocktail techniques from Beckaly Franks, Hong Kong’s top mixologist."
+                details: "Flown in especially for Malhar & the Sea, Hong Kong’s Queen of Mixology, Beckaly was recently voted Altos Bartenders Bartender in Asia’s 50 BESTBARS 2023. Champion of diversity and slinger of awesome drinks, the Hawaii born, US bred and Hong Kong honed Beckaly has burned her path to the top of the cocktail scene in Asia."
             },
             {
                 time: "1:00 PM – 2:30 PM",
                 title: "Lunch with Fado",
-                details: "Enjoy lunch by ITC Hotels with live Fado music by Nadia Rebelo."
+                details: "ITC Hotels, known for their cuisines, promises to present the most stunning lunch created by their award winning chefs while the rain presents the background music. And what better combination than one of the finest Fadistas (Fado singer) of India, Nadia Rebelo who has mesmerized the world with her amazing rendition of Fado, traditional Portugese music."
             },
             {
                 time: "5:00 PM – 6:30 PM",
                 title: "Sundowner",
-                details: "Performance by Amaan Ali Bangash & Ayaan Ali Bangash."
+                details: "Catch the young sarod maestros & youth icons Amaan Ali Bangash & Ayaan Ali Bangash in a fresh new avatar. They will perform semi classical & folk music in their inimitable style. Their musical presentation, aptly titled, ‘Songs of the River”, will trace the musical journey of various rivers from the Himalayas to the Bay of Bengal in the east & Arabian Sea in the west."
             },
             {
                 time: "7:00 PM – 8:30 PM",
                 title: "Suron Ki Barsaat",
-                details: "Ustad Shujaat Husain Khan & Rakesh Chaurasia perform solos and a duet."
+                details: "Ustad Shujaat Husain Khan is one of the most popular North Indian classical musicians of his generation. Son of Ustad Vilayat Khan, he keeps alive the rich heritage of his father. An amazing showman, he enthralls the audience with the Gayaki Ang on his sitar, which is imitative of the subtleties of the human voice. Rakesh Chaurasia is a child prodigy and the nephew of flute maestro Pt. Hariprasad Chaurasia. Rakesh is the most accomplished and sought-after flutist in the world over. And proving that talent, he has brought home two Grammy Awards this year."
             },
             {
                 time: "8:30 PM – 10:00 PM",
                 title: "Grand Finale Dinner",
-                details: "Dinner with cocktails by Beckaly Franks."
+                details: "The coolest bar With Beckaly Franks and the Grand Finale Dinner!"
             },
             {
                 time: "10:00 PM onwards",
                 title: "After-Party",
-                details: "Dance with Gary Lawyer and Kaiya Maxfield."
+                details: "A priceless, high-energy after-party with the King of Blues, Jazz and Pop, Gary Lawyer. He jams in with Kaiya Maxfield, the legendary Queen of Pop from London, flown in especially for this festival. Get ready to dance till you drop!"
             }
         ]
     },
@@ -93,18 +93,53 @@ const eventTimeline = [
             {
                 time: "9:00 AM – 12:00 PM",
                 title: "Brunch",
-                details: "Enjoy brunch with a local Goan cultural performance."
+                details: "Brunch with local Goan cultural troupe"
             }
         ]
     }
 ]
 
+const DetailsCard = ({title, details, hideCard }) => {
+
+    return (
+        <div onClick={hideCard} className='w-screen z-50 h-screen top-0 left-0 fixed p-6 flex items-center justify-center'>
+            <div className='p-8 max-w-[30rem] rounded-3xl bg-white shadow-2xl z-50 bg-opacity-100'>
+                <p className='text-pink text-center mb-5 w-full text-wrap font-sans font-bold text-5xl'>
+                    {title}
+                </p>
+                <p className='text-black text-opacity-70 w-full font-light text-xl text-wrap'>
+                    {details}
+                </p>
+            </div>
+        </div>
+    )
+}
+
 
 const Component5 = ({ eventsRef }) => {
     const [ selectedDay, setSelectedDay ] = useState(0)
+    const [ showDetails, setShowDetails ] = useState(false)
+    const [expandedEvent, setExpandedEvent] = useState(null);
+
+    const handleReadMoreClick = (id) => {
+        setExpandedEvent(id);
+        setShowDetails(true);
+    };
+
+    const handleHideCard = (id) => {
+        setExpandedEvent(null);
+        setShowDetails(false);
+    };
 
   return (
     <div ref={eventsRef} className='w-full relative pt-60 md:pt-80 lg:pt-0 bg-[#F4F4F3] py-16'>
+        {showDetails && 
+        <DetailsCard 
+            title={eventTimeline[selectedDay].events[expandedEvent].title}
+            details={eventTimeline[selectedDay].events[expandedEvent].details}
+            hideCard={handleHideCard}
+        />}
+
         <div className='w-full absolute lg:relative top-0 flex justify-end px-10 sm:px-20 md:px-20 h-fit'>
             <Image
                 src={ticketBg}
@@ -147,9 +182,23 @@ const Component5 = ({ eventsRef }) => {
                         <p className='text-black mb-3 xl:mb-0 w-full xl:w-[50%] font-sans font-bold text-4xl'>
                             {item.title}
                         </p>
-                        <p className='text-black text-opacity-70 w-full xl:w-[50%] font-light text-lg line-clamp-3'>
-                            {item.details}
-                        </p>
+                        <div className='text-black text-opacity-70 w-full xl:w-[50%] font-light text-base'>
+                                {expandedEvent === id ? (
+                                    <p>{item.details}</p>
+                                ) : (
+                                    <p className='line-clamp-4'>
+                                        {item.details}
+                                    </p>
+                                )}
+                                {item.details.length > 200 && expandedEvent !== id && (
+                                    <button 
+                                        className='text-aqua font-bold'
+                                        onClick={() => handleReadMoreClick(id)}
+                                    >
+                                        Read More
+                                    </button>
+                                )}
+                            </div>
                     </div>
                     <div className='xl:w-[15%] hidden lg:flex items-center justify-center'>
                         <Link 
