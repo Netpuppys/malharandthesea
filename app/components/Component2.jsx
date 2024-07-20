@@ -20,7 +20,7 @@ const Component2 = () => {
     <div className='w-full max-h-fit relative bg-white flex flex-col-reverse pt-[15rem] py-10 lg:py-0 lg:flex-row'>
         <div className='w-full lg:w-[50%] lg:h-[60rem]'>
             {/* top */}
-            <div className='bg-aqua absolute top-0 left-0 lg:relative font-sans w-full h-[15rem] flex flex-col lg:flex-row flex-wrap items-center justify-center gap-5 py-20 px-10'>
+            <div className='bg-aqua absolute top-0 left-0 lg:relative font-sans w-full h-[15rem] flex flex-col lg:flex-row lg:flex-wrap items-center justify-center gap-5 py-20 px-10'>
                 <p className='text-white text-nowrap text-3xl xl:text-4xl'>
                     30-31 AUGUST, 2024
                 </p>
@@ -32,7 +32,7 @@ const Component2 = () => {
 
             <div className='w-full px-5 md:px-10 lg:h-[calc(100%-15rem)] flex flex-col items-center justify-center gap-14'>
                 <video
-                    src='https://res.cloudinary.com/dkrinlbmx/video/upload/v1721407518/MALHAR_REEL_1_1920-1080_VER_2_y5isqf.mp4'
+                    src='https://res.cloudinary.com/dkrinlbmx/video/upload/v1721478972/Malhar_theSea_Website_Film_pc1hbm.mp4'
                     className='w-full'
                     autoPlay
                     muted

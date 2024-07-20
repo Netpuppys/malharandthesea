@@ -79,10 +79,14 @@ const Navbar = ({
                     </p>
                 </button>
             </div>
-            <div className="w-full h-1/2">
-                <button className='w-full h-full z-30 bg-[#E91AB0] border-l-2 border-white px-8 py-3 text-4xl text-white font-sans font-bold'>
+            <div className="w-full h-1/2 flex">
+                <Link
+                    href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
+                    target="blank"
+                    className='w-full h-full bg-[#E91AB0] border-l-2 border-white px-8 py-3 text-4xl text-white font-sans font-bold flex items-center justify-center'
+                >
                     BUY TICKETS
-                </button>
+                </Link>
             </div>
         </div>
     </div>

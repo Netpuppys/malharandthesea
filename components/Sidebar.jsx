@@ -64,6 +64,7 @@ const Sidebar = ({
         <div className="w-full h-[calc(100%-9.25rem)] bg-white flex z-50 items-center justify-center">
             <Link
                 href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
+                target="blank"
                 className="w-12 h-fit"
             >
                 <Image

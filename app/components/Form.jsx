@@ -3,6 +3,30 @@
 import React, { useRef, useState } from 'react'
 import { VscTriangleRight } from "react-icons/vsc";
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import { IoMdClose } from "react-icons/io";
+import 'react-toastify/dist/ReactToastify.css';
+
+const SuccessPopUp = ({ setDone }) => {
+    return (
+        <div className='w-screen fixed top-0 left-0 p-10 h-screen flex items-center justify-center backdrop:blur-lg z-50 pointer-events-auto'>
+            <div className='max-w-[40rem] p-1 max-h-[20rem] w-full h-full bg-white rounded-3xl flex flex-col relative items-center justify-start border-4 border-pink'>
+                <div className=' px-8 py-14 w-full h-full bg-white rounded-2xl flex flex-col relative items-center justify-center border-4 border-aqua'>
+                    <button
+                        onClick={() => setDone(false)}
+                        className='w-8 h-8 absolute top-5 rounded-full right-5 flex items-center justify-center bg-gray-500 bg-opacity-60 text-2xl'
+                    >
+                        <IoMdClose />
+                    </button>
+                    
+                    <p className='font-sans text-2xl text-black'>
+                        Thank you for showing interest. We shall get in touch soon.
+                    </p>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 const Form = ({ contactRef }) => {
     const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID
@@ -17,6 +41,7 @@ const Form = ({ contactRef }) => {
         message: ''
       });
       const [ isLoader, setIsLoader ] = useState(false)
+      const [ done, setDone ] = useState(false)
 
       const formRef = useRef()
     
@@ -48,7 +73,9 @@ const Form = ({ contactRef }) => {
           .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             setIsLoader(false)
-            alert('Message sent successfully!');
+            // alert('Message sent successfully!');
+            toast("Thank you for showing interest. We shall get in touch soon.");
+            setDone(true)
             setFormData({
               firstName: '',
               lastName: '',
@@ -67,6 +94,14 @@ const Form = ({ contactRef }) => {
 
   return (
     <div ref={contactRef} className='w-full bg-white py-10 px-10 md:px-20'>
+        {/* {done && <SuccessPopUp setDone={setDone}/>} */}
+        {/* <SuccessPopUp setDone={setDone}/> */}
+        <ToastContainer
+            closeButton
+            closeOnClick={true}
+            
+        />
+
         <p className='text-pink text-6xl font-sans font-extrabold'>
             HAVE QUESTIONS? CONTACT US!
         </p>
