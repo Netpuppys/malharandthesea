@@ -36,7 +36,7 @@ const Component4 = () => {
         }, updateInterval);
     
         return () => clearInterval(interval);
-      }, [textArray.length, updateInterval]);
+      }, [textArray, updateInterval]);
   return (
     <div className='bg-white py-20 xl:h-[35rem] flex xl:flex-row flex-col items-center justify-center gap-10 w-full'>
         <div className='w-full xl:w-[50%] px-20 xl:px-28 flex flex-col items-start justify-center'>

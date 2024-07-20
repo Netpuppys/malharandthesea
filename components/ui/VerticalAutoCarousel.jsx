@@ -35,7 +35,7 @@ const VerticalAutoCarousel = ({ images, updateInterval }) => {
     }, updateInterval); // Change image every 3 seconds
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, updateInterval]);
 
   return (
     <div className="overflow-hidden w-full h-full relative" ref={carouselRef}>

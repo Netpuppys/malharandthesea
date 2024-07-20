@@ -34,18 +34,22 @@ const Footer = () => {
             <Image
                 src={pinkDotBg}
                 className='h-full'
+                alt='bg'
             />
             <Image
                 src={pinkDotBg}
                 className='h-full'
+                alt='bg'
             />
             <Image
                 src={pinkDotBg}
                 className='h-full'
+                alt='bg'
             />
             <Image
                 src={pinkDotBg}
                 className='h-full'
+                alt='bg'
             />
         </div>
         

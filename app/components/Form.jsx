@@ -4,11 +4,11 @@ import React, { useRef, useState } from 'react'
 import { VscTriangleRight } from "react-icons/vsc";
 import emailjs from '@emailjs/browser';
 
-const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID
-const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID
-const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY
-
 const Form = ({ contactRef }) => {
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
