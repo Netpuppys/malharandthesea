@@ -190,7 +190,7 @@ const Component5 = ({ eventsRef }) => {
                                         {item.details}
                                     </p>
                                 )}
-                                {item.details.length > 200 && expandedEvent !== id && (
+                                {item.details.length > 150 && expandedEvent !== id && (
                                     <button 
                                         className='text-aqua font-bold'
                                         onClick={() => handleReadMoreClick(id)}
