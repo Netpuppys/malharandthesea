@@ -31,8 +31,6 @@ const Form = ({ contactRef }) => {
         e.preventDefault();
         setIsLoader(true)
         const { firstName, lastName, phoneNumber, email, message } = formData;
-        
-        // const name = firstName + " " + lastName;
 
         const templateParams = {
             firstName,
