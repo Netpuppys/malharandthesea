@@ -56,7 +56,7 @@ const Footer = () => {
         <div className='w-full z-10 flex items-center justify-between flex-col lg:flex-row gap-10'>
             <div className='w-fit'>
                 <p className='font-sans mb-4 text-4xl lg:text-6xl text-white uppercase font-extrabold'>
-                    reserve your slot before its too late !
+                    reserve your slot before it&apos;s too late !
                 </p>
 
                 <div className='max-w-[40rem] border-b-2 mb-4 border-black flex items-center justify-center'>

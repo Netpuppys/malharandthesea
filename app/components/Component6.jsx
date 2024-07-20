@@ -36,7 +36,7 @@ const content = [
     //     subTitle: "International and Indian artists unite in celebration of Goa's cultural tapestry."
     // },
     {
-        title: "Art with Impact",
+        title: "ART WITH A HEART",
         subTitle: "Auctioning Paresh Maity's painting to support the visually impaired community in Goa."
     }
 ];
