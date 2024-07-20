@@ -7,6 +7,7 @@ import { useState } from "react";
 import NavMenu from "./NavMenu";
 import { IoMdClose } from "react-icons/io";
 import bmsBtn from "../public/sidebar/bmsBtn.png"
+import Link from "next/link";
 
 const Sidebar = ({
     eventsRef,
@@ -61,13 +62,16 @@ const Sidebar = ({
         </button>
 
         <div className="w-full h-[calc(100%-9.25rem)] bg-white flex z-50 items-center justify-center">
-            <button className="w-12 h-fit">
+            <Link
+                href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
+                className="w-12 h-fit"
+            >
                 <Image
                     src={bmsBtn}
                     className="w-full h-full"
                     alt="Main menu"
                 />
-            </button>
+            </Link>
         </div>
     </div>
   )

@@ -32,7 +32,7 @@ const Component2 = () => {
 
             <div className='w-full px-5 md:px-10 lg:h-[calc(100%-15rem)] flex flex-col items-center justify-center gap-14'>
                 <video
-                    src='https://res.cloudinary.com/dkrinlbmx/video/upload/v1721373817/MALHAR_REEL_1_otrubl.mp4'
+                    src='https://res.cloudinary.com/dkrinlbmx/video/upload/v1721407518/MALHAR_REEL_1_1920-1080_VER_2_y5isqf.mp4'
                     className='w-full'
                     autoPlay
                     muted

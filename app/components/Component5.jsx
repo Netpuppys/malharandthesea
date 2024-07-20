@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import ticketBg from "../../public/backgrounds/ticketFilled.png"
 import Image from 'next/image'
 import { VscTriangleRight } from "react-icons/vsc";
+import Link from 'next/link';
 
 const eventTimeline = [
     {
@@ -151,9 +152,12 @@ const Component5 = ({ eventsRef }) => {
                         </p>
                     </div>
                     <div className='xl:w-[15%] hidden lg:flex items-center justify-center'>
-                        <button className='text-3xl absolute top-10 right-0 xl:relative flex items-center justify-center uppercase font-bold text-aqua font-sans'>
+                        <Link 
+                            href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
+                            className='text-3xl absolute top-10 right-0 xl:relative flex items-center justify-center uppercase font-bold text-aqua font-sans'
+                        >
                             Book Now <VscTriangleRight />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             ))

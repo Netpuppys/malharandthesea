@@ -60,9 +60,12 @@ const Navbar = ({
                 </Link>
             ))}
 
-            <button className='z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'>
+            <Link 
+                href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
+                className='z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'
+            >
                 BUY TICKETS
-            </button>
+            </Link>
         </div>
 
         <div className="md:hidden bg-transparent w-[calc(100%-7.875rem)] h-full">
