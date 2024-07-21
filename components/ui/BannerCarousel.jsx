@@ -6,7 +6,7 @@ import banner2 from "../../public/banner/2.png";
 import banner3 from "../../public/banner/3.png";
 import Image from 'next/image';
 import { useMobile } from '@/app/utils/MobileContext';
-import bannerMobile1 from "../../public/banner/bannerMobile1.png"
+import bannerMobile1 from "../../public/banner/bannerMobile1.PNG"
 import bannerMobile2 from "../../public/banner/bannerMobile2.png"
 import bannerMobile3 from "../../public/banner/bannerMobile3.png"
 
