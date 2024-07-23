@@ -30,14 +30,6 @@ const eventGuests = [
                 image: pareshMaity
             },
             {
-                name: "Shujaat Husain Khan",
-                image: ustadShujaat
-            },
-            {
-                name: "Hosted By Ira Dubey",
-                image: iraDubey
-            },
-            {
                 name: "Kaushiki Chakraborty",
                 image: Kaushiki
             },
@@ -46,14 +38,22 @@ const eventGuests = [
                 image: purbayaChatterjee
             },
             {
-                name: "Shivam Bhardwaj",
+                name: "Tasawwur Qawwali Ensemble",
                 image: ShivamBharadwaj
-            }
+            },
+            {
+                name: "Hosted By Ira Dubey",
+                image: iraDubey
+            },
         ]
     },
     {
         date: "Saturday",
         guests: [
+            {
+                name: "Shujaat Husain Khan",
+                image: ustadShujaat
+            },
             {
                 name: "Beckaly Franks",
                 image: BeckalyFranks
