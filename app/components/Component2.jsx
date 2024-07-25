@@ -10,6 +10,8 @@ const images = [
     showhouseLogo
 ]
 
+const videoUrl = "https://res.cloudinary.com/dkrinlbmx/video/upload/v1721902028/InShot_20240723_191320701_lu4qoq.mp4"
+
 const desc1 = "An average music concert typically sees thousands of attendees jostling for space, sitting and standing in rows, with the artists performing at a distance. These concerts last a couple of hours with minimal interaction between the artists and the audience. Attendees often face long queues for food and beverages, and the event ends as abruptly as it started, leaving you more tired than soothed by the music."
 const desc2 = "Malhar & the Sea is none of the above."
 const desc3 = "This immersive, interactive, and exclusive music concert will take place at the ITC Grand Goa Resort and Spa on 30th and 31st August 2024. It’s a one-of-a-kind residential concert featuring icons of Indian music, ranging from Indian classical and Sufi Qawwali to Rock, Pop, and Fado. The festival will center around Jugalbandis, where artists will perform soulful solos and stimulating duets. This intimate concert will host only 150 couples, allowing them to immerse themselves in music while enjoying the luxurious hospitality of the ITC Grand Goa and cuisine prepared by world-renowned chefs."
@@ -32,7 +34,7 @@ const Component2 = () => {
 
             <div className='w-full px-5 md:px-10 lg:h-[calc(100%-15rem)] flex flex-col items-center justify-center gap-14'>
                 <video
-                    src='https://res.cloudinary.com/dkrinlbmx/video/upload/v1721478972/Malhar_theSea_Website_Film_pc1hbm.mp4'
+                    src={videoUrl}
                     className='w-full'
                     autoPlay
                     muted
