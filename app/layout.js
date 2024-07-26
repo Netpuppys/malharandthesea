@@ -1,11 +1,11 @@
-import { Overpass } from "next/font/google";
 import "./globals.css";
-
+import { Overpass } from "next/font/google";
 const inter = Overpass({ subsets: ["latin"] });
-
 export const metadata = {
-  title: "Malhaar and the Sea",
-  description: "Showhouse India presents",
+  title:
+    "Malhar & The Sea: A Mesmerizing Musical and Cultural Extravaganza in Goa",
+  description:
+    "Join us for Malhar & The Sea, a unique event from August 30 to September 1, 2024, at ITC Grand Goa. Enjoy performances by renowned artists, culinary delights, mixology masterclasses, and more. Experience the magic of monsoon, music, and art in a spectacular seaside setting.",
 };
 
 export default function RootLayout({ children }) {
@@ -14,12 +14,29 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet"></link>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap"
+          rel="stylesheet"
+        ></link>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-QNTXFYSL82"
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-QNTXFYSL82');
+          `}
+        </script>
       </head>
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
