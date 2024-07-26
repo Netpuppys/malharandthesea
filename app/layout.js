@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNTXFYSL82"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
+          function gtag(){dataLayer.push(arguments)};
           gtag(&apos;js&apos;, new Date());
         
           gtag(&apos;config&apos;, &apos;G-QNTXFYSL82&apos;);
