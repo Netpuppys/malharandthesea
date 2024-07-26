@@ -131,6 +131,10 @@ const Component5 = ({ eventsRef }) => {
         setShowDetails(false);
     };
 
+    const handleClick = () => {
+        return `gtag_report_conversion(${process.env.NEXT_PUBLIC_BOOKMYSHOW})`
+    }
+
   return (
     <div ref={eventsRef} className='w-full relative pt-60 md:pt-80 lg:pt-0 bg-[#F4F4F3] py-16'>
         {showDetails && 
@@ -201,9 +205,10 @@ const Component5 = ({ eventsRef }) => {
                             </div>
                     </div>
                     <div className='xl:w-[15%] hidden lg:flex items-center justify-center'>
-                        <Link 
+                        <Link
                             href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
                             target="blank"
+                            onClick={handleClick}
                             className='text-3xl absolute top-10 right-0 xl:relative flex items-center justify-center uppercase font-bold text-aqua font-sans'
                         >
                             Book Now <VscTriangleRight />

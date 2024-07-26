@@ -18,6 +18,10 @@ const Sidebar = ({
 }) => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
+    const handleClick = () => {
+        return `gtag_report_conversion(${process.env.NEXT_PUBLIC_BOOKMYSHOW})`
+    }
+
   return (
     <div className="w-[5.75rem] hidden md:block h-screen fixed top-0 overflow-visible right-0 z-[99] bg-off-white">
 
@@ -64,6 +68,7 @@ const Sidebar = ({
         <div className="w-full h-[calc(100%-9.25rem)] bg-white flex z-50 items-center justify-center">
             <Link
                 href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
+                onClick={handleClick}
                 target="blank"
                 className="w-12 h-fit"
             >

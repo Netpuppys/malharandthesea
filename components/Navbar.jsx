@@ -29,6 +29,10 @@ const Navbar = ({
 }) => {
     const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
 
+    const handleClick = () => {
+        return `gtag_report_conversion(${process.env.NEXT_PUBLIC_BOOKMYSHOW})`
+    }
+
   return (
     <div style={navBtnHover ? { paddingRight: "20rem" } : {}} className={`fixed md:relative h-[10rem] md:h-[9.25rem] z-50 w-full bg-custom-gradient md:pr-14 flex items-center justify-between`}>
 
@@ -63,6 +67,7 @@ const Navbar = ({
             <Link 
                 href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
                 target="blank"
+                onClick={handleClick}
                 className='z-30 bg-[#E91AB0] px-8 py-3 text-4xl text-white font-sans font-bold'
             >
                 BUY TICKETS
@@ -83,6 +88,7 @@ const Navbar = ({
             <div className="w-full h-1/2 flex">
                 <Link
                     href={process.env.NEXT_PUBLIC_BOOKMYSHOW}
+                    onClick={handleClick}
                     target="blank"
                     className='w-full h-full bg-[#E91AB0] border-l-2 border-white px-8 py-3 text-4xl text-white font-sans font-bold flex items-center justify-center'
                 >
