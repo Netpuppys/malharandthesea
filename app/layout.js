@@ -23,16 +23,13 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap"
           rel="stylesheet"
         ></link>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-QNTXFYSL82"
-        ></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-671252312"></script>
         <script>
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-QNTXFYSL82');
+            gtag('config', 'AW-671252312');
           `}
         </script>
       </head>
