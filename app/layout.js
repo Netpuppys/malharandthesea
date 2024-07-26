@@ -16,17 +16,12 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet"></link>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNTXFYSL82"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)};
-          gtag(&apos;js&apos;, new Date());
         
-          gtag(&apos;config&apos;, &apos;G-QNTXFYSL82&apos;);
-        </script>
 
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 }
