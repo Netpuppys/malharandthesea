@@ -47,7 +47,6 @@
   grid-template-columns: auto auto auto auto;
 	grid-auto-rows: 300px;
 	grid-auto-flow: dense;
-  max-width: 1280px;
   margin:auto;
 }
 .grid-wrapper > div {
