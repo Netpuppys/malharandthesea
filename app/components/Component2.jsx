@@ -5,7 +5,7 @@ import nabLogo from "../../public/logos/nabLogo.png"
 import Image from 'next/image'
 
 const images = [
-    itcLogo,
+    // itcLogo,
     nabLogo,
     showhouseLogo
 ]
@@ -46,7 +46,7 @@ const Component2 = () => {
                         in support of
                     </p>
 
-                    <div className='w-full flex items-center md:flex-col lg:flex-row justify-between gap-2 pr-5 lg:pr-10'>
+                    <div className='w-full flex items-center md:flex-col lg:flex-row justify-center gap-2'>
                         {images.map((item, id) => (
                             <Image
                                 key={id}
