@@ -11,17 +11,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-M62PZ53J');
-            `,
-          }}
-        />
         <link rel="icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -33,39 +22,32 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap"
           rel="stylesheet"
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-671252312"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-671252312');
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1775436869466195');
+            fbq('track', 'PageView');
             `,
           }}
         />
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNTXFYSL82"></script>
-        <script 
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-QNTXFYSL82');
-              `,
-          }} 
-        />
+        <noscript>
+          <img 
+            height="1" 
+            width="1" 
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1775436869466195&ev=PageView&noscript=1"
+          />
+        </noscript>
       </head>
       <body className={inter.className}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-M62PZ53J"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
         {children}
       </body>
     </html>
