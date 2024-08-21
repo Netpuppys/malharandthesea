@@ -115,7 +115,7 @@ const LineUp = ({ lineUpRef }) => {
     // }
 
   return (
-    <div ref={lineUpRef} className='w-full px-10 py-10'>
+    <div ref={lineUpRef} id="line-up" className='w-full px-10 py-10'>
         <div className='w-full flex flex-col xl:flex-row items-center justify-between'>
             <h1 className='text-pink font-sans text-6xl font-extrabold'>
             ARTIST LINE UP

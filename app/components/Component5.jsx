@@ -17,7 +17,7 @@ const eventTimeline = [
             },
             {
                 time: "4:30 PM",
-                title: "Hi-Tea",
+                title: "Make new friends over Hi-Tea",
                 details: "Prolific stage and film actor Ira Dubey welcomes the guests to a Hi-Tea where the guests get to know each other over informal and lively conversations amidst the pitter patter of the rain on the sea."
             },
             {
@@ -57,17 +57,17 @@ const eventTimeline = [
             },
             {
                 time: "12:00 PM – 1:00 PM",
-                title: "Mixology Masterclass",
+                title: "Mixology MasterclassMixology Masterclass ~ With Beckaly Franks",
                 details: "Flown in especially for Malhar & the Sea, Hong Kong’s Queen of Mixology, Beckaly was recently voted Altos Bartenders Bartender in Asia’s 50 BESTBARS 2023. Champion of diversity and slinger of awesome drinks, the Hawaii born, US bred and Hong Kong honed Beckaly has burned her path to the top of the cocktail scene in Asia."
             },
             {
                 time: "1:00 PM – 2:30 PM",
-                title: "Lunch with Fado",
+                title: "Delectable lunch with Fado and other Portuguese/Goan music.",
                 details: "ITC Hotels, known for their cuisines, promises to present the most stunning lunch created by their award winning chefs while the rain presents the background music. And what better combination than one of the finest Fadistas (Fado singer) of India, Nadia Rebelo who has mesmerized the world with her amazing rendition of Fado, traditional Portugese music."
             },
             {
                 time: "5:00 PM – 6:30 PM",
-                title: "Sundowner",
+                title: "Sundowner with Amaan Ali Bangash & Ayaan Ali Bangash.",
                 details: "Catch the young sarod maestros & youth icons Amaan Ali Bangash & Ayaan Ali Bangash in a fresh new avatar. They will perform semi classical & folk music in their inimitable style. Their musical presentation, aptly titled, ‘Songs of the River”, will trace the musical journey of various rivers from the Himalayas to the Bay of Bengal in the east & Arabian Sea in the west."
             },
             {
@@ -82,7 +82,7 @@ const eventTimeline = [
             },
             {
                 time: "10:00 PM onwards",
-                title: "After-Party",
+                title: "After-party… dance into the night",
                 details: "A priceless, high-energy after-party with the King of Blues, Jazz and Pop, Gary Lawyer. He jams in with Kaiya Maxfield, the legendary Queen of Pop from London, flown in especially for this festival. Get ready to dance till you drop!"
             }
         ]
@@ -92,7 +92,7 @@ const eventTimeline = [
         events: [
             {
                 time: "9:00 AM – 12:00 PM",
-                title: "Brunch",
+                title: "Breakfast and Checkout",
                 details: "Brunch with local Goan cultural troupe"
             }
         ]
@@ -136,7 +136,7 @@ const Component5 = ({ eventsRef }) => {
     }
 
   return (
-    <div ref={eventsRef} className='w-full relative pt-60 md:pt-80 lg:pt-0 bg-[#F4F4F3] py-16'>
+    <div ref={eventsRef} id="events" className='w-full relative pt-60 md:pt-80 lg:pt-0 bg-[#F4F4F3] py-16'>
         {showDetails && 
         <DetailsCard 
             title={eventTimeline[selectedDay].events[expandedEvent].title}

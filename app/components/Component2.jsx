@@ -42,19 +42,33 @@ const Component2 = () => {
                 />
 
                 <div className='w-full flex flex-col items-center justify-center'>
-                    <p className='capitalize mb-4 md:mb-0 text-xl text-black leading-none font-light font-sans text-center'>
+                    {/* <p className='capitalize mb-4 md:mb-0 text-xl text-black leading-none font-light font-sans text-center'>
                         in support of
-                    </p>
+                    </p> */}
 
                     <div className='w-full flex items-center md:flex-col lg:flex-row justify-center gap-2'>
-                        {images.map((item, id) => (
+                        <div>
+                            <p className='capitalize mb-4 md:mb-0 text-xl text-black leading-none font-light font-sans text-center'>
+                                In support of
+                            </p>
                             <Image
-                                key={id}
-                                src={item}
+                                src={nabLogo}
                                 className='h-14 md:h-24 object-contain'
                                 alt='itc nab showhouse'
                             />
-                        ))}
+                        </div>
+                        <div>
+                            <p className='capitalize mb-4 md:mb-0 text-xl text-black leading-none font-light font-sans text-center'>
+                                Curated by
+                            </p>
+                            <Image
+                                src={showhouseLogo}
+                                className='h-14 md:h-24 object-contain'
+                                alt='itc nab showhouse'
+                            />
+                        </div>
+                            
+                           
                     </div>
                 </div>
             </div>

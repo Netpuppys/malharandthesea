@@ -93,7 +93,7 @@ const Form = ({ contactRef }) => {
     
 
   return (
-    <div ref={contactRef} className='w-full bg-white py-10 px-10 md:px-20'>
+    <div ref={contactRef} id="contact" className='w-full bg-white py-10 px-10 md:px-20'>
         {/* {done && <SuccessPopUp setDone={setDone}/>} */}
         {/* <SuccessPopUp setDone={setDone}/> */}
         <ToastContainer
