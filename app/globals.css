@@ -67,6 +67,7 @@
 
 .grid-wrapper .wide {
 	grid-column: span 2;
+  grid-row: span 2;
 }
 .grid-wrapper .tall {
 	grid-row: span 2;
@@ -97,6 +98,13 @@
 
 .grid-wrapper .big {
 	grid-column: span 2;
+  
 	/* grid-row: span 2; */
 }
+
+.grid-wrapper .big img{
+  object-position:top;
+  
+}
+
 }
